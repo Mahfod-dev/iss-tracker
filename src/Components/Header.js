@@ -9,7 +9,7 @@ const getStorageTheme = () => {
 }
 
 const Header = () => {
-	const [theme, setTheme] = useState(getStorageTheme))
+	const [theme, setTheme] = useState(getStorageTheme)
 
 	const toogleTheme = () => {
 		if (theme === 'light-theme') {
@@ -21,7 +21,7 @@ const Header = () => {
 
 	useEffect(() => {
 		document.documentElement.className = theme
-		localStorage.setItem('theme',theme)
+		localStorage.setItem('theme', theme)
 	}, [theme])
 
 	return (
