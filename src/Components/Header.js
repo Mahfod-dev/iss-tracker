@@ -1,7 +1,15 @@
 import React, { useState, useEffect } from 'react'
 
+const getStorageTheme = () => {
+	let theme = 'light-theme'
+	if (localStorage.getItem('theme')) {
+		theme = localStorage.getItem('theme')
+	}
+	return theme
+}
+
 const Header = () => {
-	const [theme, setTheme] = useState('light-theme')
+	const [theme, setTheme] = useState(getStorageTheme))
 
 	const toogleTheme = () => {
 		if (theme === 'light-theme') {
@@ -13,6 +21,7 @@ const Header = () => {
 
 	useEffect(() => {
 		document.documentElement.className = theme
+		localStorage.setItem('theme',theme)
 	}, [theme])
 
 	return (
