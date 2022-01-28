@@ -1,11 +1,25 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react'
 
 const Header = () => {
-    return (
-        <div>
-           je suis un header 
-        </div>
-    );
-};
+	const [theme, setTheme] = useState('light-theme')
 
-export default Header;
+	const toogleTheme = () => {
+		if (theme === 'light-theme') {
+			setTheme('dark-theme')
+		} else {
+			setTheme('light-theme')
+		}
+	}
+
+	useEffect(() => {
+		document.documentElement.className = theme
+	}, [theme])
+
+	return (
+		<div>
+			<button onClick={toogleTheme}>Toogle</button>
+		</div>
+	)
+}
+
+export default Header
