@@ -1,11 +1,25 @@
-import React from 'react'
-import { Header, Footer } from './Constants/exportModule'
+import React, {useState, useEffect} from 'react'
+import {Loader, Header, Footer } from './Constants/exportModule'
+
 
 const App = () => {
-	return (
+
+	const [loader, setLoader] = useState(true);
+
+	useEffect(() => {
+		setTimeout(() => {
+			setLoader(false)
+		}, 2500)
+	}, [])
+
+	return loader ? 
+	(
+		<Loader />
+	) : (
 		<>
 			<Header />
 			<Footer />
+			<div>Coucou</div>
 		</>
 	)
 }
