@@ -1,4 +1,5 @@
 import React from 'react'
+
 import { Header, Footer } from './Constants/exportModule'
 
 const App = () => {
@@ -10,4 +11,4 @@ const App = () => {
 	)
 }
 
-export default App
+ export default App
