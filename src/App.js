@@ -1,14 +1,12 @@
 import React from 'react'
-
-import { Header, Footer } from './Constants/exportModule'
+import SectionQuiz from './Components/Quiz/SectionQuiz'
 
 const App = () => {
 	return (
 		<>
-			<Header />
-			<Footer />
+			<SectionQuiz />
 		</>
 	)
 }
 
- export default App
+export default App

@@ -8,7 +8,7 @@ const url = ''
 const tempUrl =
 	'https://opentdb.com/api.php?amount=10&category=17&difficulty=easy&type=multiple'
 
-const AppContext = React.createContext
+const AppContext = React.createContext()
 
 const AppProvider = ({ children }) => {
 	const [waiting, setWaiting] = useState(true)
@@ -20,7 +20,20 @@ const AppProvider = ({ children }) => {
 
 	const [isModalOpen, setIsModalOpen] = useState(false)
 
-	return <AppContext.Provider value={'hello'}>{children}</AppContext.Provider>
+	const fetchQuestions = async (url) => {
+		setLoading(true)
+		setWaiting(false)
+
+		const response = axios(url).catch((err) => console.log(err))
+		console.log(response)
+	}
+
+	return (
+		<AppContext.Provider
+			value={{ waiting, questions, index, correct, error, isModalOpen }}>
+			{children}
+		</AppContext.Provider>
+	)
 }
 
 export const useContextQuiz = () => {
