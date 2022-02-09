@@ -6,7 +6,7 @@ const API_ENDPOINT = 'https://opentdb.com/api.php?'
 const url = ''
 
 const tempUrl =
-	'https://opentdb.com/api.php?amount=10&category=17&difficulty=easy&type=multiple'
+	'https://opentdb.com/api.php?amount=50&category=17&difficulty=medium&type=multiple'
 
 const AppContext = React.createContext()
 
@@ -24,13 +24,41 @@ const AppProvider = ({ children }) => {
 		setLoading(true)
 		setWaiting(false)
 
-		const response = axios(url).catch((err) => console.log(err))
-		console.log(response)
+		const response = await axios.get(url).catch((err) => console.log(err))
+
+		if (response) {
+			const {
+				data: { results },
+			} = response
+			if (results.length > 0) {
+				setQuestions(results)
+				setLoading(false)
+				setWaiting(false)
+				setError(false)
+			}else{
+				setWaiting(true)
+				setError(true)
+			}
+		} else {
+			setWaiting(true)
+		}
 	}
+
+	useEffect(() => {
+		fetchQuestions(tempUrl)
+	}, [])
 
 	return (
 		<AppContext.Provider
-			value={{ waiting, questions, index, correct, error, isModalOpen }}>
+			value={{
+				waiting,
+				loading,
+				questions,
+				index,
+				correct,
+				error,
+				isModalOpen,
+			}}>
 			{children}
 		</AppContext.Provider>
 	)
