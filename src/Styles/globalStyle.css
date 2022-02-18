@@ -1,10 +1,24 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-    /* background-image: url(); */
+    background-image: url("../assets/SpaceBackgroundDark.jpeg");
     background-repeat: no-repeat;
     width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
+}
+
+h1, h2, h3, h4, h5, h6, li, a {
+    font-family: "Rubik", sans-serif;
+}
+
+p, span {
+    font-family: "sahitya", sans-serif;
 }
 
 /* ---------Titres--------- */
@@ -20,74 +34,14 @@ shadow {
     --shadows-boxes:-7px 9px 4px 6px rgba(31, 34, 43, 0.46);
 }
 
-/* ---------Buttons---------- */
-
-.call-to-action {
-    width: 140px;
-    height: 48px;
-    color: black;
-    background: #C9ECFC;
-    font-size: 20px;
-    border-radius: 5px;
-}
-
-/* ---------Articles--------- */
-
-.articles {
-    width: 100%;
-    height: 360px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-
-.articles-cards {
-    width: 186px;
-    height: 262px;
-    box-shadow: var(--shadows-boxes);
-}
-
-/* ---------Container MAP--------- */
 
 
-.container-map-coordinates {
-    width: 820px;
-    height: 610px;
-    display: flex;
-    flex-direction: column;
-    box-shadow: var(--shadows-boxes)
-}
 
-.container-map {
-    width: 100%;
-    height: 85%;
-}
 
-.container-coordinates {
-    width: 100%;
-    height: 15%;
-}
 
-/* ---------Quizz main page--------- */
 
-.container-quizz {
-    text-align: center;
-    width: 710px;
-    height: 410px;
-    display: flex;
-    flex-direction: column;
-    color: white;
-    border: 3px solid #FF807E ;
-}
 
-/* ---------Footer--------- */
 
-footer{
-    width: 100%;
-    height: 268px;
-    background: linear-gradient(180deg, #5F2C4D 0%, rgba(95, 44, 77, 0.708333) 86.98%, rgba(95, 44, 77, 0) 100%);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+
+
 

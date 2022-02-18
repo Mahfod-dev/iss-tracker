@@ -1,0 +1,10 @@
+/* ---------Buttons---------- */
+
+.call-to-action {
+    width: 140px;
+    height: 48px;
+    color: black;
+    background: #C9ECFC;
+    font-size: 20px;
+    border-radius: 5px;
+}
