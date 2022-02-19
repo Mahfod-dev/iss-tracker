@@ -1,8 +1,8 @@
 import React from 'react'
 import "./Button.css"
 
-export default function Button() {
+export default function Button({CTA}) {
   return (
-    <div>Button</div>
+    <button>{CTA}</button>
   )
 }
