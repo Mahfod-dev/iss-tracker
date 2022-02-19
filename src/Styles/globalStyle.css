@@ -5,7 +5,10 @@
 }
 
 body {
-    background-image: url("../Assets/SpaceBackgroundDark.jpeg");
+    background: 
+        url("../Assets/body.png") center,
+        url("../Assets/SpaceBackgroundDark.jpeg");
+   
     background-repeat: no-repeat;
     width: 100%;
     height: 100%;

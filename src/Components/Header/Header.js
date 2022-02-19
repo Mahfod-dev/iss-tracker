@@ -1,11 +1,19 @@
 import React from 'react';
-import style from "./Header.module.css"
+import Introduction from './Introduction.js';
+import Articles from '../Articles/Articles.js';
+import Hr from '../UI/Hr/Hr.js';
+
+import style from './Header.module.css';
 
 const Header = () => {
     return (
-        <div>
-            Header
+        <>
+        <div className={style.header}>
+            <Introduction />
+            <Hr/>
+            <Articles />
         </div>
+        </>
     );
 };
 
