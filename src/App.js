@@ -1,4 +1,3 @@
-import React from 'react'
 import SectionQuiz from './Components/Quiz/SectionQuiz'
 import React, { useState, useEffect } from 'react'
 import {
@@ -14,7 +13,6 @@ import { Routes, Route } from 'react-router-dom'
 const App = () => {
 	return (
 		<>
-			<SectionQuiz />
 			<NavBar />
 			<Header />
 			<Routes>
