@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: 
+        url("../Assets/body.png") center,
+        url("../Assets/SpaceBackgroundDark.jpeg");
+   
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+h1, h2, h3, h4, h5, h6, li, a {
+    font-family: "Rubik", sans-serif;
+}
+
+p, span {
+    font-family: "sahitya", sans-serif;
+}
+
+/* ---------Titres--------- */
+
+.title {
+  font-size: 46px;
+  color: white;  
+}
+
+/* ---------Shadow-réutilisable--------- */
+
+shadow {
+    --shadows-boxes:-7px 9px 4px 6px rgba(31, 34, 43, 0.46);
+}
+
+
+
+
+
+
+
+
+
+
+
+
