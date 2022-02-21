@@ -1,7 +1,12 @@
 import React from 'react'
+import FooterForm from './FooterForm'
 
 const Footer = () => {
-	return <div>Je suis un footer</div>
+	return (
+		<>
+			<FooterForm />
+		</>
+	)
 }
 
 export default Footer
