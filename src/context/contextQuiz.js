@@ -91,8 +91,6 @@ const AppProvider = ({ children }) => {
 		e.preventDefault()
 		const { amount, category, difficulty } = quiz
 
-		const tempUrl =
-			'https://opentdb.com/api.php?amount=10&category=17&difficulty=medium&type=multiple'
 		console.log(amount, category, difficulty)
 		const url = `${API_ENDPOINT}amount=${amount}&category=${table[category]}&difficulty=${difficulty}&type=multiple`
 		console.log(url)

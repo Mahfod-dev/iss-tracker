@@ -9,15 +9,17 @@ import {
 } from './Constants/exportModule'
 import './Styles/globalStyle.css'
 import { Routes, Route } from 'react-router-dom'
+import Authpage from './pages/Authpage'
 
 const App = () => {
 	return (
 		<>
 			<NavBar />
-			<Header />
+
 			<Routes>
-				<Route path='/' exact element={<Main />} />
+				<Route path='/' exact element={<Header />} />
 				{/* <Route path="/apropos" element={<About />} /> */}
+				<Route path='/auth' element={<Authpage />} />
 				<Route path='/quizz' element={<SectionQuizz />} />
 			</Routes>
 			<Footer />
