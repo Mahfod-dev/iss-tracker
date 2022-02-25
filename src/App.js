@@ -1,15 +1,15 @@
-import SectionQuiz from './Components/Quiz/SectionQuiz'
-import React, { useState, useEffect } from 'react'
-import {
-	Header,
-	Footer,
-	NavBar,
-	SectionQuizz,
-	Main,
-} from './Constants/exportModule'
-import './Styles/globalStyle.css'
+import React, { lazy, Suspense } from 'react'
 import { Routes, Route } from 'react-router-dom'
-import Authpage from './pages/Authpage'
+//
+import { Footer, NavBar, Main } from './Constants/exportModule'
+//
+import './Styles/globalStyle.css'
+
+const Header = lazy(() => import('./Components/Header/Header'))
+const Authenfication = lazy(() => import('./pages/Authenfication'))
+const Quiz = lazy(() => import('./pages/Quiz'))
+const About = lazy(() => import('./pages/About'))
+console.log(Header, About)
 
 const App = () => {
 	return (
@@ -17,11 +17,41 @@ const App = () => {
 			<NavBar />
 
 			<Routes>
-				<Route path='/' exact element={<Header />} />
-				{/* <Route path="/apropos" element={<About />} /> */}
-				<Route path='/auth' element={<Authpage />} />
-				<Route path='/quizz' element={<SectionQuizz />} />
+				<Route
+					path='/'
+					element={
+						<Suspense fallback={<div>Loading....</div>}>
+							<Header />
+						</Suspense>
+					}
+				/>
+				<Route
+					path='/apropos'
+					element={
+						<Suspense fallback={<div>Loading....</div>}>
+							<About />
+						</Suspense>
+					}
+				/>
+				<Route
+					path='auth'
+					element={
+						<Suspense fallback={<div>Loading....</div>}>
+							<Authenfication />
+						</Suspense>
+					}
+				/>
+
+				<Route
+					path='quizz'
+					element={
+						<Suspense fallback={<div>Loading....</div>}>
+							<Quiz />
+						</Suspense>
+					}
+				/>
 			</Routes>
+
 			<Footer />
 		</>
 	)

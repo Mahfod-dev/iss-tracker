@@ -1,7 +1,7 @@
 import React from 'react'
 import AuthForm from '../Components/Authenfication/AuthForm'
 
-const Authpage = () => {
+const Authenfication = () => {
 	return (
 		<>
 			<AuthForm />
@@ -9,4 +9,4 @@ const Authpage = () => {
 	)
 }
 
-export default Authpage
+export default Authenfication
