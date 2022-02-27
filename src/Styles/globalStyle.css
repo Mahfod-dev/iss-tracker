@@ -15,6 +15,7 @@
 	--clr-primary: #d23669;
 	background: url('../Assets/body.png') center,
 		url('../Assets/SpaceBackgroundDark.jpeg');
+	background-repeat: no-repeat;
 }
 
 body {
