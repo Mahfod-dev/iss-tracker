@@ -6,9 +6,9 @@ import { Footer, NavBar, Main } from './Constants/exportModule'
 import './Styles/globalStyle.css'
 
 const Header = lazy(() => import('./Components/Header/Header'))
-const Authenfication = lazy(() => import('./pages/Authenfication'))
-const Quiz = lazy(() => import('./pages/Quiz'))
-const About = lazy(() => import('./pages/About'))
+const Authenfication = lazy(() => import('./Pages/Authenfication'))
+const Quiz = lazy(() => import('./Pages/Quiz'))
+const About = lazy(() => import('./Pages/About'))
 console.log(Header, About)
 
 const App = () => {
