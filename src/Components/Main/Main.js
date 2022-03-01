@@ -1,7 +1,8 @@
 import React from 'react'
+import { ContextCoordinates } from '../../Utiles/Coordinates'
 
 export default function Main() {
-  return (
-    <div>Main</div>
-  )
+	const data = ContextCoordinates()
+
+	return <div>Main</div>
 }

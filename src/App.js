@@ -15,7 +15,7 @@ const App = () => {
 	return (
 		<>
 			<NavBar />
-
+			<Main />
 			<Routes>
 				<Route
 					path='/'
@@ -52,7 +52,7 @@ const App = () => {
 				/>
 			</Routes>
 
-			{/* <Footer /> */}
+			<Footer />
 		</>
 	)
 }
