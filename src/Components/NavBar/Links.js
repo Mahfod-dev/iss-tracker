@@ -1,23 +1,23 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import style from './NavBar.module.css'
 
 export default function Links() {
 	return (
-		<div className='container-links'>
+		<div className={style.containerLinks}>
 			<ul>
-				<li>
-					<Link to='/'>Accueil</Link>
-				</li>
-				<li>
-					<Link to='/apropos'>A propos</Link>
-				</li>
-				<li>
-					<Link to='/auth'>Login</Link>
-				</li>
-				<li>
-					{' '}
-					<Link to='/quizz'>Testez-vous</Link>
-				</li>
+				<Link to='/'>
+					<h3>Accueil</h3>
+				</Link>
+				<Link to='/apropos'>
+					<h3>A propos</h3>
+				</Link>
+				<Link to='/auth'>
+					<h3>Login</h3>
+				</Link>
+				<Link to='/quizz'>
+					<h3>Testez-vous</h3>
+				</Link>
 			</ul>
 		</div>
 	)

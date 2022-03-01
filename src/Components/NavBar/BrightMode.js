@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import DarkModeToggle from 'react-dark-mode-toggle'
 
+import style from './NavBar.module.css'
+
 const getStorageTheme = () => {
 	let theme = 'light-theme'
 	if (localStorage.getItem('theme')) {
@@ -26,7 +28,7 @@ const BrightMode = () => {
 		localStorage.setItem('theme', theme)
 	}, [theme])
 	return (
-		<div onClick={toggleTheme} className='nav-center'>
+		<div onClick={toggleTheme} className={style.navCenter}>
 			{/* <button type='checkbox' className='btn' onClick={toggleTheme}>
 				</button> */}
 			<DarkModeToggle
