@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 
 const ISS_URL = 'http://api.open-notify.org/iss-now.json'
-const App = () => {
+const Coordinates = () => {
 	const [coordinates, setCoordinates] = useState({ lat: '', lng: '' })
 
 	const handleLocation = async () => {
@@ -29,4 +29,4 @@ const App = () => {
 	return <div>hello</div>
 }
 
-export default App
+export default Coordinates
