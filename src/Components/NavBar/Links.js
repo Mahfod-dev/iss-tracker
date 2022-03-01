@@ -5,10 +5,19 @@ export default function Links() {
 	return (
 		<div className='container-links'>
 			<ul>
-				<Link to='/'>Accueil</Link>
-				<Link to='/apropos'>A propos</Link>
-				<Link to='/auth'>Login</Link>
-				<Link to='/quizz'>Testez-vous</Link>
+				<li>
+					<Link to='/'>Accueil</Link>
+				</li>
+				<li>
+					<Link to='/apropos'>A propos</Link>
+				</li>
+				<li>
+					<Link to='/auth'>Login</Link>
+				</li>
+				<li>
+					{' '}
+					<Link to='/quizz'>Testez-vous</Link>
+				</li>
 			</ul>
 		</div>
 	)
