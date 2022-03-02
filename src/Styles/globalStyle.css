@@ -23,6 +23,7 @@ body {
 	height: 100%;
 	display: flex;
 	flex-direction: column;
+	background: url('../Assets/body.png') center no-repeat;
 }
 
 h1,
@@ -41,11 +42,11 @@ h2,
 h3,
 h4,
 h5,
-h6{
+h6 {
 	text-transform: none;
 }
 
-h3{
+h3 {
 	font-size: 24px;
 }
 

@@ -37,20 +37,20 @@ const App = () => {
 						</Suspense>
 					}
 				/>
-				<Route
-					path='auth'
-					element={
-						<Suspense fallback={<Loader />}>
-							<Authenfication />
-						</Suspense>
-					}
-				/>
 
 				<Route
 					path='quizz'
 					element={
 						<Suspense fallback={<Loader />}>
 							<Quiz />
+						</Suspense>
+					}
+				/>
+				<Route
+					path='auth'
+					element={
+						<Suspense fallback={<Loader />}>
+							<Authenfication />
 						</Suspense>
 					}
 				/>

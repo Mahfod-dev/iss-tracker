@@ -9,43 +9,46 @@ footer {
 	position: relative;
 	bottom: 0;
 	width: 100%;
-	z-index:10;
+	z-index: 10;
 	padding: 2rem 19%;
-	margin-top:3rem;
-    background: linear-gradient(180deg, #5F2C4D 0%, rgba(95, 44, 77, 0.8) 80%, rgba(95, 44, 77, 0) 100%);
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+	margin-top: 3rem;
+	background: linear-gradient(
+		180deg,
+		#5f2c4d 0%,
+		rgba(95, 44, 77, 0.8) 80%,
+		rgba(95, 44, 77, 0) 100%
+	);
+	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
-.social{
-	display:flex;
+.social {
+	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
 	justify-content: space-between;
 }
 
-
-.socialIcon{
+.socialIcon {
 	font-size: 24px;
-	margin:0.5em 0.5em 0 0;
+	margin: 0.5em 0.5em 0 0;
 }
 
-
-button{
+button {
 	width: auto;
-    height: 25px;
-    color: black;
-    background: #C9ECFC;
-    font-size: 12px;
+	height: 25px;
+	color: black;
+	background: #c9ecfc;
+	font-size: 12px;
 	font-weight: 500;
-	padding:0 0.5em;
-    border-radius: 5px;
-	border-style:none;
+	padding: 0 0.5em;
+	border-radius: 5px;
+	border-style: none;
 	margin-left: 0.5em;
 }
 
-#newsletterSubscription{
-	border:solid 3px #C9ECFC;
+#newsletterSubscription {
+	border: solid 3px #c9ecfc;
 	height: 25px;
-	padding-left:0.5em;
-	color:black;
+	padding-left: 0.5em;
+	color: black;
 }

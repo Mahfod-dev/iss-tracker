@@ -17,13 +17,13 @@ export default function Links() {
 					</Link>
 				</li>
 				<li>
-					<Link to='/auth'>
-						<h3>Login</h3>
+					<Link to='/quizz'>
+						<h3>Testez-vous</h3>
 					</Link>
 				</li>
 				<li>
-					<Link to='/quizz'>
-						<h3>Testez-vous</h3>
+					<Link to='/auth'>
+						<h3>Login</h3>
 					</Link>
 				</li>
 			</ul>
