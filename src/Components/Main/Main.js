@@ -1,8 +1,12 @@
 import React from 'react'
-import { ContextCoordinates } from '../../Utiles/Coordinates'
+import { Outlet } from 'react-router-dom'
+import Coordinates from '../../Utiles/Coordinates'
 
 export default function Main() {
-	const data = ContextCoordinates()
-
-	return <div>Main</div>
+	return (
+		<div>
+			main
+			<Coordinates />
+		</div>
+	)
 }
