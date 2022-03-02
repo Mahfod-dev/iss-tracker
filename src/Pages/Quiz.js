@@ -1,5 +1,10 @@
-import React from 'react';
+import React from 'react'
+import { SectionQuizz } from '../Constants/exportModule'
 
 export default function Quizz() {
-  return <div>Je suis Quizz</div>;
+	return (
+		<>
+			<SectionQuizz />
+		</>
+	)
 }
