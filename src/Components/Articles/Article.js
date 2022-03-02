@@ -10,7 +10,7 @@ export default function Article(props){
                 <p>{props.content}</p>
             </div>
 
-            <img src={props.image} alt=''/>
+            <img src={props.image} alt='' className='shadow'/>
             
         </div>
     );
