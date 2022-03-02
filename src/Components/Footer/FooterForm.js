@@ -1,14 +1,18 @@
 import React from 'react'
-import "./Footer.css"
+import SocialNetworks from './SocialNetworks'
+
+import style from './Footer.module.css'
 
 const FooterForm = () => {
 	return (
-		<footer>
-			<form className='footer-form' action='https://formspree.io/f/mdobgydk' method='POST'>
-				<input type='email' placeholder='Enter Email' name='_replyto' />
-				<button type='submit'>subscribe</button>
+		<div className={style.social}>
+			<span>Inscrivez-vous à notre newsletter :</span>
+			<form action='https://formspree.io/f/mdobgydk' method='POST'>
+				<input id={style.newsletterSubscription} type='email' placeholder='adresse mail' name='_replyto' />
+				<button type='submit'>Je m'inscris</button>
 			</form>
-		</footer>
+			<SocialNetworks/>
+		</div>
 	)
 }
 

@@ -1,7 +1,8 @@
 import React, { lazy, Suspense } from 'react'
 import { Routes, Route } from 'react-router-dom'
 //
-import { Footer, NavBar, Main } from './Constants/exportModule'
+import { Footer, NavBar, Loader } from './Constants/exportModule'
+
 //
 import './Styles/globalStyle.css'
 
@@ -9,7 +10,8 @@ const Header = lazy(() => import('./Components/Header/Header'))
 const Authenfication = lazy(() => import('./Pages/Authenfication'))
 const Quiz = lazy(() => import('./Pages/Quiz'))
 const About = lazy(() => import('./Pages/About'))
-console.log(Header, About)
+const Main = lazy(() => import('./Components/Main/Main'))
+console.log(Header, About, Main)
 
 const App = () => {
 	return (
@@ -20,15 +22,17 @@ const App = () => {
 				<Route
 					path='/'
 					element={
-						<Suspense fallback={<div>Loading....</div>}>
+						<Suspense fallback={<Loader />}>
 							<Header />
+							<Main />
 						</Suspense>
 					}
 				/>
+
 				<Route
 					path='/apropos'
 					element={
-						<Suspense fallback={<div>Loading....</div>}>
+						<Suspense fallback={<Loader />}>
 							<About />
 						</Suspense>
 					}
@@ -36,7 +40,7 @@ const App = () => {
 				<Route
 					path='auth'
 					element={
-						<Suspense fallback={<div>Loading....</div>}>
+						<Suspense fallback={<Loader />}>
 							<Authenfication />
 						</Suspense>
 					}
@@ -45,7 +49,7 @@ const App = () => {
 				<Route
 					path='quizz'
 					element={
-						<Suspense fallback={<div>Loading....</div>}>
+						<Suspense fallback={<Loader />}>
 							<Quiz />
 						</Suspense>
 					}
