@@ -14,7 +14,7 @@
 	--clr-font: #282c35;
 	--clr-primary: #d23669;
 	background: url('../Assets/body.png') center,
-		url('../Assets/SpaceBackgroundDark.jpeg');
+		url('../Assets/SpaceBackgroundDark.jpg');
 }
 
 body {
