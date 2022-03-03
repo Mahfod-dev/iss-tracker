@@ -1,6 +1,9 @@
 import { createContext, useState, useEffect } from 'react'
 
-import { onAuthStateChangedListener } from '../Utiles/Firebase/FirebaseAuth'
+import {
+	onAuthStateChangedListener,
+	createUserDocumentFromAuth,
+} from '../Utiles/Firebase/FirebaseAuth'
 
 export const UserContext = createContext({
 	setCurrentUser: () => null,
@@ -13,9 +16,16 @@ export const UseProvider = ({ children }) => {
 
 	useEffect(() => {
 		const unsubscribe = onAuthStateChangedListener((user) => {
+		
+			if (user) {
+				createUserDocumentFromAuth(user)
+			}
 			setCurrentUser(user)
+
 			console.log(user)
 		})
+
+		return unsubscribe
 	}, [])
 
 	return <UserContext.Provider value={value}>{children}</UserContext.Provider>

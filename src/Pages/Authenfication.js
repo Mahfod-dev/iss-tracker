@@ -1,10 +1,12 @@
 import React from 'react'
-import AuthForm from '../Components/Authenfication/AuthForm'
+import Signin from '../Components/Authenfication/Signin'
+import Signup from '../Components/Authenfication/Signup'
 
 const Authenfication = () => {
 	return (
 		<>
-			<AuthForm />
+			<Signin />
+			<Signup />
 		</>
 	)
 }

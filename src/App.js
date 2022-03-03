@@ -1,6 +1,8 @@
 import React, { lazy, Suspense } from 'react'
 import { Routes, Route } from 'react-router-dom'
+import Signin from './Components/Authenfication/Signin'
 //
+import Signup from './Components/Authenfication/Signup'
 import { Footer, NavBar, Loader } from './Constants/exportModule'
 
 //
@@ -47,10 +49,18 @@ const App = () => {
 					}
 				/>
 				<Route
-					path='auth'
+					path='sign-in'
 					element={
 						<Suspense fallback={<Loader />}>
-							<Authenfication />
+							<Signin />
+						</Suspense>
+					}
+				/>
+				<Route
+					path='sign-up'
+					element={
+						<Suspense fallback={<Loader />}>
+							<Signup />
 						</Suspense>
 					}
 				/>

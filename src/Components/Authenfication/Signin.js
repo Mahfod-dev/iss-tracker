@@ -1,6 +1,7 @@
 import { useState, useRef } from 'react'
+import { Link } from 'react-router-dom'
 import {
-	createAuthUserWithEmailAndPassword,
+	signInAuthUserWithEmailAndPassword,
 	signInWithGooglePopup,
 } from '../../Utiles/Firebase/FirebaseAuth'
 import classes from './AuthForm.module.css'
@@ -10,14 +11,9 @@ const defaultFormFields = {
 	password: '',
 }
 
-const AuthForm = () => {
-	const [isLogin, setIsLogin] = useState(true)
+const Signin = () => {
 	const [formFields, setFormFields] = useState(defaultFormFields)
 	const { email, password } = formFields
-
-	const switchAuthModeHandler = () => {
-		setIsLogin((prevState) => !prevState)
-	}
 
 	const resetFormFields = () => {
 		setFormFields(defaultFormFields)
@@ -27,11 +23,11 @@ const AuthForm = () => {
 		event.preventDefault()
 
 		try {
-			const { user } = await createAuthUserWithEmailAndPassword(email, password)
-
+			await signInAuthUserWithEmailAndPassword(email, password)
+			console.log('add modal')
 			resetFormFields()
 		} catch (error) {
-			console.log(error.message)
+			console.log('user sign in failed', error)
 		}
 	}
 	const handleChange = (event) => {
@@ -67,22 +63,23 @@ const AuthForm = () => {
 	// })
 
 	return (
-		<section className={classes.auth}>
+		<section className={classes['login-box']}>
+			<h2 className={classes.title}>Sign in</h2>
 			<form onSubmit={submitHandler}>
-				<div className={classes.control}>
-					<h2>{isLogin ? 'Login' : 'Sign Up'}</h2>
-					<label htmlFor='email'>Your Email</label>
-					<input
-						type='email'
-						id='email'
-						required
-						onChange={handleChange}
-						name='email'
-						value={email}
-					/>
+				<div className={classes['user-box']}>
+					<div className={classes['user-box']}>
+						<input
+							type='email'
+							id='email'
+							required
+							onChange={handleChange}
+							name='email'
+							value={email}
+						/>
+						<label htmlFor='email'>Your Email</label>
+					</div>
 				</div>
-				<div className={classes.control}>
-					<label htmlFor='password'>Your Password</label>
+				<div className={classes['user-box']}>
 					<input
 						type='password'
 						id='password'
@@ -91,15 +88,13 @@ const AuthForm = () => {
 						name='password'
 						value={password}
 					/>
+					<label htmlFor='password'>Your Password</label>
 				</div>
-				<div className={classes.actions}>
-					<button>{isLogin ? 'Login' : 'Create Account'}</button>
-					{isLogin && <button onClick={signInWithGooglePopup}>Google</button>}
-					<button
-						type='button'
-						className={classes.toggle}
-						onClick={switchAuthModeHandler}>
-						{isLogin ? 'Create new account' : 'Login with existing account'}
+				<div>
+					<button>Login</button>
+					<button onClick={signInWithGooglePopup}>Google</button>
+					<button>
+						<Link to='/sign-up'>Sign Up Instead</Link>
 					</button>
 				</div>
 			</form>
@@ -107,4 +102,4 @@ const AuthForm = () => {
 	)
 }
 
-export default AuthForm
+export default Signin
