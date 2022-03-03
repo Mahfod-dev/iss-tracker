@@ -1,11 +1,11 @@
 import React from 'react'
-import { Outlet } from 'react-router-dom'
+import WorldMap from './WorldMap'
 import Coordinates from '../../Utiles/Coordinates'
 
 export default function Main() {
 	return (
 		<div>
-			main
+			<WorldMap />
 			<Coordinates />
 		</div>
 	)
