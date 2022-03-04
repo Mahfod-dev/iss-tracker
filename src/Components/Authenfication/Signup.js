@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 import {
 	createAuthUserWithEmailAndPassword,
@@ -14,6 +14,7 @@ const defaultFormFields = {
 }
 
 const Signup = () => {
+	const navigate = useNavigate()
 	const [formFields, setFormFields] = useState(defaultFormFields)
 	const { displayName, email, password, confirmPassword } = formFields
 
@@ -34,7 +35,7 @@ const Signup = () => {
 
 			await createUserDocumentFromAuth(user, { displayName })
 			console.log('add Modal')
-
+			navigate('/')
 			resetFormFields()
 		} catch (error) {
 			if (error.code === 'auth/email-already-in-use') {

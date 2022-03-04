@@ -4,5 +4,6 @@ import NavBar from '../Components/NavBar/NavBar'
 import Main from '../Components/Main/Main'
 import SectionQuizz from '../Components/Quiz/SectionQuiz'
 import Loader from '../UI/Loader/Loader'
+import HomePage from '../Components/HomePage/HomePage'
 
-export { Header, Footer, NavBar, Main, SectionQuizz, Loader }
+export { Header, Footer, NavBar, Main, SectionQuizz, Loader, HomePage }

@@ -1,5 +1,6 @@
-import { useState, useRef } from 'react'
-import { Link } from 'react-router-dom'
+import { useState, useMemo, useEffect } from 'react'
+import { Link, useNavigate } from 'react-router-dom'
+import debounce from 'lodash.debounce'
 import {
 	signInAuthUserWithEmailAndPassword,
 	signInWithGooglePopup,
@@ -12,6 +13,8 @@ const defaultFormFields = {
 }
 
 const Signin = () => {
+	const navigate = useNavigate()
+
 	const [formFields, setFormFields] = useState(defaultFormFields)
 	const { email, password } = formFields
 
@@ -24,17 +27,35 @@ const Signin = () => {
 
 		try {
 			await signInAuthUserWithEmailAndPassword(email, password)
-			console.log('add modal')
+navigate('/')
 			resetFormFields()
+			
 		} catch (error) {
 			console.log('user sign in failed', error)
 		}
 	}
+
 	const handleChange = (event) => {
 		const { name, value } = event.target
+		console.log(event.target.value)
 
 		setFormFields({ ...formFields, [name]: value })
 	}
+
+	// const debouncedResults = useMemo(() => {
+	// 	return debounce(handleChange, 3000)
+	// }, [])
+
+	// useEffect(() => {
+	// 	return () => {
+	// 		debouncedResults.cancel()
+	// 	}
+	// })
+
+	// 	const debouceSaved =
+	// 		(() => setFormFields({ ...formFields, [name]: value }), 3000)
+	// 	debouceSaved()
+	// }
 
 	// optional: Add validation
 

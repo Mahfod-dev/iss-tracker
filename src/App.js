@@ -1,21 +1,26 @@
-import React, { lazy, Suspense } from 'react'
+import React, { lazy, Suspense, useContext } from 'react'
 import { Routes, Route } from 'react-router-dom'
-import Signin from './Components/Authenfication/Signin'
-//
-import Signup from './Components/Authenfication/Signup'
-import { Footer, NavBar, Loader } from './Constants/exportModule'
+
+import { UserContext } from './context/UserContext'
+import { Footer, NavBar, Loader, HomePage } from './Constants/exportModule'
 
 //
 import './Styles/globalStyle.css'
 
 const Header = lazy(() => import('./Components/Header/Header'))
 const Authenfication = lazy(() => import('./Pages/Authenfication'))
+const Signup = lazy(() => import('./Components/Authenfication/Signup'))
+const Signin = lazy(() => import('./Components/Authenfication/Signin'))
 const Quiz = lazy(() => import('./Pages/Quiz'))
 const About = lazy(() => import('./Pages/About'))
 const Main = lazy(() => import('./Components/Main/Main'))
 console.log(Header, About, Main)
 
 const App = () => {
+	const { currentUser } = useContext(UserContext)
+
+	console.log(currentUser)
+
 	return (
 		<>
 			<NavBar />
@@ -26,7 +31,7 @@ const App = () => {
 					element={
 						<Suspense fallback={<Loader />}>
 							<Header />
-							<Main />
+							{currentUser ? <Main /> : <HomePage />}
 						</Suspense>
 					}
 				/>
