@@ -1,6 +1,6 @@
-import ArticleFrontPage from './ArticleFrontPage';
+import Article from './Article';
 
-import style from './Articles.css';
+import './Articles.css';
 
 import SpaceStationImage from '../../Assets/SpaceStationFrontPage.png';
 import AstronautCloseFrontPage from '../../Assets/AstronautCloseFrontPage.png';
@@ -39,7 +39,7 @@ export default function Articles(){
         <div className='articlesContainer'>
             {articles.map(({title, imageFront}, index) => {
                 return(
-                    <ArticleFrontPage 
+                    <Article 
                         key={index+1}
                         titleArticle={title}
                         imageArticle={imageFront}
