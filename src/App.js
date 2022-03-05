@@ -12,7 +12,7 @@ const Header = lazy(() => import('./Components/Header/Header'))
 const Signup = lazy(() => import('./Components/Authenfication/Signup'))
 const Signin = lazy(() => import('./Components/Authenfication/Signin'))
 const Quiz = lazy(() => import('./Pages/Quiz'))
-const About = lazy(() => import('./Pages/About'))
+const About = lazy(() => import('./Pages/About/About'))
 const Main = lazy(() => import('./Components/Main/Main'))
 console.log(Header, About, Main)
 

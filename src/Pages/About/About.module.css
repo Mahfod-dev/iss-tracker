@@ -1,0 +1,50 @@
+.title{
+    position:absolute;
+    z-index:3;
+    left: -1em;
+    top: 0.6em;
+}
+
+.aboutTeam, .projectDescription{
+    width:100%;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.containerColoredFrame{
+    width: 100%;
+    border: solid 3px #FF807E;
+    padding: 4em 2em 1em 1em;
+    margin-top:1em;
+
+}
+
+.container{
+    width:60%;
+    position:relative;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+hr {
+    width:60%;
+    border: 0.5px solid #262b3b;
+    margin:3em 0;
+}
+
+.infoProject{
+    display:flex;
+    align-items: space-around;
+}
+
+.wildeSchoolInfo, .reactJSinfo{
+    display:flex;
+    justify-content: space-between;
+    margin: 1em;
+
+}
