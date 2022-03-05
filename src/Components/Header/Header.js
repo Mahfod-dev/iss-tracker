@@ -22,6 +22,7 @@ const Header = () => {
 						</p>
 					</div>
 				</div>
+				<hr />
 				<Article />
 			</div>
 		</>

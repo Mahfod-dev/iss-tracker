@@ -1,8 +1,4 @@
 /***** articles front page*****/
-h3{
-    font-size: 24px;
-    justify-content: center;
-}
 
 .articlesContainer{
     width:836px;
@@ -20,6 +16,7 @@ h3{
     width:186px;
     height:auto;
     top:0;
+    box-shadow: -7px 9px 4px 6px rgba(31, 34, 43, 0.46);
 }
 
 .articleTitle{
@@ -29,6 +26,10 @@ h3{
     top: 2em;
     left:0.05em;
     text-align: right;
+}
+
+h2{
+    font-size:max(2em, 26px)!important;
 }
 
 /***** articles separate pages *****/
