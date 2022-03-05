@@ -1,5 +1,5 @@
 import { socials } from './data.js'
-import style from './Footer.module.css'
+import style from './Footer.module.css';
 
 export default function SocialNetworks() {
 	return (

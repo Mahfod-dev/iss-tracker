@@ -1,7 +1,7 @@
 import React from 'react'
 import SocialNetworks from './SocialNetworks'
 
-import style from './Footer.module.css'
+import style from './Footer.module.css';
 
 const FooterForm = () => {
 	return (

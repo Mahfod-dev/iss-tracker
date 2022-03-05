@@ -11,7 +11,7 @@ const Header = () => {
 			<div className={style.header}>
 				<div className={style.introduction}>
 					<div className={style.introductionFrame}>
-						<h1>Le titre de notre site web </h1>
+						<h1 className={style.mainTitle}>Le titre de notre site web </h1>
 
 						<p>
 							'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
@@ -22,6 +22,7 @@ const Header = () => {
 						</p>
 					</div>
 				</div>
+				<hr />
 				<Article />
 			</div>
 		</>

@@ -1,11 +1,11 @@
 import Article from './Article'
 import { articles } from './data.js'
 
-import './Articles.css'
+import style from './Articles.module.css'
 
 export default function Articles() {
 	return (
-		<div className='articlesContainer'>
+		<div className={style.articlesContainer}>
 			{articles.map(({ title, imageFront, id }) => {
 				return (
 					<Article
