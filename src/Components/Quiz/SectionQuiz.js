@@ -1,7 +1,7 @@
 import React from 'react'
 import { useContextQuiz } from '../../context/contextQuiz'
 
-import './Quiz.css'
+import style from './Quiz.module.css'
 
 import SetupForm from '../Quiz/SetupForm'
 import Loading from '../Quiz/Loading'
@@ -39,8 +39,8 @@ const SectionQuiz = () => {
 	return (
 		<main>
 			<Modal />
-			<section className='quiz'>
-				<p className='correct-answers'>
+			<section className={style.quiz}>
+				<p className={style.correct-answers}>
 					Correct answers:{correct} / {index}
 				</p>
 				<article className='container'>
@@ -59,7 +59,7 @@ const SectionQuiz = () => {
 						})}
 					</div>
 				</article>
-				<button className='next-question' onClick={nextQuestion}>
+				<button className={style.next-question} onClick={nextQuestion}>
 					next question
 				</button>
 			</section>

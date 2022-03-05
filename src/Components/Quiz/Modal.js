@@ -1,6 +1,7 @@
 import React from 'react'
 import { useContextQuiz } from '../../context/contextQuiz'
 
+
 const Modal = () => {
 	const { isModalOpen, closeModal, correct, questions } = useContextQuiz()
 	return (
