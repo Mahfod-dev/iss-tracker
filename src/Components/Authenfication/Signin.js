@@ -90,6 +90,7 @@ const Signin = () => {
 				<div className={classes['user-box']}>
 					<div className={classes['user-box']}>
 						<input
+							className={classes["input-form"]}
 							type='email'
 							id='email'
 							required
@@ -102,6 +103,7 @@ const Signin = () => {
 				</div>
 				<div className={classes['user-box']}>
 					<input
+						className={classes["input-form"]}
 						type='password'
 						id='password'
 						required
@@ -112,9 +114,9 @@ const Signin = () => {
 					<label htmlFor='password'>Your Password</label>
 				</div>
 				<div>
-					<button type='submit'>Login</button>
-					<button onClick={signInWithGooglePopup}>Google</button>
-					<button>
+					<button className={classes["button-form"]} type='submit'>Login</button>
+					<button className={classes["button-form"]} onClick={signInWithGooglePopup}>Google</button>
+					<button className={classes["button-form"]}>
 						<Link to='/sign-up'>Sign Up Instead</Link>
 					</button>
 				</div>
