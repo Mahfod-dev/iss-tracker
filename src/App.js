@@ -9,7 +9,6 @@ import ArticleItem from './Components/Articles/ArticleItem'
 import './Styles/globalStyle.css'
 
 const Header = lazy(() => import('./Components/Header/Header'))
-const Authenfication = lazy(() => import('./Pages/Authenfication'))
 const Signup = lazy(() => import('./Components/Authenfication/Signup'))
 const Signin = lazy(() => import('./Components/Authenfication/Signin'))
 const Quiz = lazy(() => import('./Pages/Quiz'))

@@ -25,7 +25,7 @@ export const UseProvider = ({ children }) => {
 			console.log(user)
 		})
 
-		return unsubscribe
+		return () => unsubscribe
 	}, [])
 
 	return <UserContext.Provider value={value}>{children}</UserContext.Provider>
