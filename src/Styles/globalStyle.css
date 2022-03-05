@@ -16,6 +16,8 @@
 	--clr-bcg: #fff;
 	--clr-font: #282c35;
 	--clr-primary: #d23669;
+	background: url('../Assets/body.png') center no-repeat,
+	url('../Assets/SpaceBackgroundBright.jpg');
 }
 
 body {
