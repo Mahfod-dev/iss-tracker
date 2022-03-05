@@ -40,26 +40,26 @@ const SectionQuiz = () => {
 		<main>
 			<Modal />
 			<section className={style.quiz}>
-				<p className={style.correct-answers}>
+				<p className={style["correct-answers"]}>
 					Correct answers:{correct} / {index}
 				</p>
-				<article className='container'>
+				<article className={style.container}>
 					<h2 dangerouslySetInnerHTML={{ __html: question }} />
 
-					<div className='btn-container'>
+					<div className={style["btn-container"]}>
 						{answers.map((answer, index) => {
 							return (
 								<button
 									key={index}
 									onClick={() => checkAnswer(correct_answer === answer)}
-									className='answer-btn'
+									className={style['answer-btn']}
 									dangerouslySetInnerHTML={{ __html: answer }}
 								/>
 							)
 						})}
 					</div>
 				</article>
-				<button className={style.next-question} onClick={nextQuestion}>
+				<button className={style["next-question"]} onClick={nextQuestion}>
 					next question
 				</button>
 			</section>

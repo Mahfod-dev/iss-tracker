@@ -12,11 +12,9 @@ import {
 } from 'firebase/auth'
 import { getFirestore, doc, getDoc, setDoc } from 'firebase/firestore'
 
-const API_KEY = process.env.REACT_APP_API_KEY
-
 
 const firebaseConfig = {
-	apiKey: API_KEY,
+	apiKey: "AIzaSyDENFNKUI3EvxOj9Kh8etaC0M5wLUpwHmg",
 	authDomain: 'iss-tracker-adcf9.firebaseapp.com',
 	projectId: 'iss-tracker-adcf9',
 	storageBucket: 'iss-tracker-adcf9.appspot.com',

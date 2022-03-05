@@ -1,14 +1,15 @@
 import React from 'react'
 import { useContextQuiz } from '../../context/contextQuiz'
+import style from "./Quiz.module.css"
 
 const SetupForm = () => {
 	const { quiz, handleChange, handleSubmit, error } = useContextQuiz()
 	return (
 		<main>
-			<section className='quiz quiz-small'>
-				<form className='setup-form'>
+			<section className={style['quiz quiz-small']}>
+				<form className={style['setup-form']}>
 					<h2>Setup quiz</h2>
-					<div className='form-control'>
+					<div className={style['form-control']}>
 						<label htmlFor='amount'>number of questions</label>
 						<input
 							type='number'
@@ -16,7 +17,7 @@ const SetupForm = () => {
 							id='amount'
 							value={quiz.amount}
 							onChange={handleChange}
-							className='form-input'
+							className={style['form-input']}
 							min={1}
 							max={50}
 						/>
@@ -28,7 +29,7 @@ const SetupForm = () => {
 						<select
 							name='category'
 							id='category'
-							className='form-input'
+							className={style['form-input']}
 							value={quiz.category}
 							onChange={handleChange}>
 							<option value='science'>science</option>
@@ -38,12 +39,12 @@ const SetupForm = () => {
 					</div>
 					{/* difficulty */}
 
-					<div className='form-control'>
+					<div className={style['form-control']}>
 						<label htmlFor='difficulty'>select difficulty</label>
 						<select
 							name='difficulty'
 							id='difficulty'
-							className='form-input'
+							className={style['form-input']}
 							value={quiz.difficulty}
 							onChange={handleChange}>
 							<option value='easy'>easy</option>
@@ -54,7 +55,7 @@ const SetupForm = () => {
 					{error && (
 						<p>Can't generate questions,please try different options</p>
 					)}
-					<button className='submit-btn' type='submit' onClick={handleSubmit}>
+					<button className={style['submit-btn']} type='submit' onClick={handleSubmit}>
 						Start
 					</button>
 				</form>

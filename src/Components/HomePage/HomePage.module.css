@@ -1,3 +1,7 @@
-.body {
-    max-width: 1224px;
+.container_map {
+    width: 80%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
