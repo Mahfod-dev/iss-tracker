@@ -7,28 +7,26 @@ import { signOutUser } from '../../Utiles/Firebase/FirebaseAuth'
 import { UserContext } from '../../context/UserContext'
 //CSS
 import style from './NavBar.module.css'
+import { links } from './data.js'
 
 export default function Links() {
+	console.log(links)
 	const { currentUser } = useContext(UserContext)
+
+	const navLink = links.map((link) => {
+		return (
+			<li key={link.id}>
+				<Link to={link.url}>
+					<h3>{link.text}</h3>
+				</Link>
+			</li>
+		)
+	})
 
 	return (
 		<div className={style.containerLinks}>
 			<ul>
-				<li>
-					<Link to='/'>
-						<h3>Accueil</h3>
-					</Link>
-				</li>
-				<li>
-					<Link to='/apropos'>
-						<h3>A propos</h3>
-					</Link>
-				</li>
-				<li>
-					<Link to='/quizz'>
-						<h3>Testez-vous</h3>
-					</Link>
-				</li>
+				{navLink}
 				<li>
 					{currentUser ? (
 						<Link to='/' onClick={signOutUser}>

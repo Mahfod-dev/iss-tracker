@@ -3,6 +3,7 @@ import { Routes, Route } from 'react-router-dom'
 
 import { UserContext } from './context/UserContext'
 import { Footer, NavBar, Loader, HomePage } from './Constants/exportModule'
+import ArticleItem from './Components/Articles/ArticleItem'
 
 //
 import './Styles/globalStyle.css'
@@ -69,6 +70,8 @@ const App = () => {
 						</Suspense>
 					}
 				/>
+
+				<Route path='article/:id' element={<ArticleItem />} />
 			</Routes>
 
 			<Footer />

@@ -5,18 +5,17 @@
 }
 
 .dark-theme {
-	--clr-bcg: #282c35;
-	--clr-font: #fff;
+	--clr-bcg: #7c7f85;
+	--clr-font: #ce7c7c;
 	--clr-primary: #ffa7c4;
 
 	background: url('../Assets/body.png') center no-repeat,
-	url('../Assets/SpaceBackgroundDark.jpg');
+		url('../Assets/SpaceBackgroundDark.jpg');
 }
 .light-theme {
 	--clr-bcg: #fff;
 	--clr-font: #282c35;
 	--clr-primary: #d23669;
-
 }
 
 body {
@@ -37,6 +36,7 @@ h6,
 li,
 a {
 	font-family: 'Rubik One', sans-serif;
+	color: var(--clr-font);
 }
 
 h1,
@@ -55,6 +55,7 @@ h3 {
 p,
 span {
 	font-family: 'sahitya', sans-serif;
+	color: var(--clr-font);
 }
 
 /* ---------Titres--------- */

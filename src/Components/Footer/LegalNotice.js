@@ -1,5 +1,7 @@
-export default function LegalNotice (){
-    return (
-        <div>Legal notice</div>
-    );
+export default function LegalNotice() {
+	return (
+		<>
+			<span>Legal notice</span>
+		</>
+	)
 }

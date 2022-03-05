@@ -1,11 +1,15 @@
-export default function Article({ titleArticle, imageArticle }) {
+import { Link, useParams } from 'react-router-dom'
+export default function Article({ titleArticle, imageArticle, id }) {
+	console.log(id)
 	return (
-		<div className='article'>
+		<article className='article'>
 			<div className='articleTitle'>
 				<h2>{titleArticle}</h2>
 			</div>
-			<img src={imageArticle} alt='' />
+			<Link to={`/article/${id}`}>
+				<img src={imageArticle} alt='' />
+			</Link>
 			{/* alt text à renseigner */}
-		</div>
+		</article>
 	)
 }

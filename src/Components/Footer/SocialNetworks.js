@@ -1,26 +1,16 @@
-import {
-	FaTwitterSquare,
-	FaLinkedin,
-	FaGithubSquare,
-	FaFacebookSquare,
-} from 'react-icons/fa'
+import { socials } from './data.js'
 import style from './Footer.module.css'
 
 export default function SocialNetworks() {
 	return (
-		<div>
-			<a href='https://twitter.com/home'>
-				<FaTwitterSquare className={style.socialIcon} />
-			</a>
-			<a href='https://www.facebook.com'>
-				<FaFacebookSquare className={style.socialIcon} />
-			</a>
-			<a href='https://www.linkedin.com'>
-				<FaLinkedin className={style.socialIcon} />
-			</a>
-			<a href='https://github.com'>
-				<FaGithubSquare className={style.socialIcon} />
-			</a>
-		</div>
+		<section>
+			{socials.map((social) => {
+				return (
+					<a className={style.socialIcon} href={social.url}>
+						{social.icon}
+					</a>
+				)
+			})}
+		</section>
 	)
 }

@@ -35,8 +35,9 @@ const Signup = () => {
 
 			await createUserDocumentFromAuth(user, { displayName })
 			console.log('add Modal')
-			navigate('/')
+
 			resetFormFields()
+			navigate('/')
 		} catch (error) {
 			if (error.code === 'auth/email-already-in-use') {
 				alert('Cannot create user, email already in use')

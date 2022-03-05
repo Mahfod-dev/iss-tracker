@@ -27,9 +27,9 @@ const Signin = () => {
 
 		try {
 			await signInAuthUserWithEmailAndPassword(email, password)
-navigate('/')
+
 			resetFormFields()
-			
+			navigate('/')
 		} catch (error) {
 			console.log('user sign in failed', error)
 		}
@@ -112,7 +112,7 @@ navigate('/')
 					<label htmlFor='password'>Your Password</label>
 				</div>
 				<div>
-					<button>Login</button>
+					<button type='submit'>Login</button>
 					<button onClick={signInWithGooglePopup}>Google</button>
 					<button>
 						<Link to='/sign-up'>Sign Up Instead</Link>
