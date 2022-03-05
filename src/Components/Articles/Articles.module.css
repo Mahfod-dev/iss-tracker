@@ -6,7 +6,6 @@
     justify-content: space-between;
 }
 
-
 .article{
     width:197px;
     position: relative;
@@ -23,14 +22,12 @@
     position:absolute;
     width:100%;
     z-index:2;
-    top: 2em;
+    top: 0.5em;
     left:0.05em;
     text-align: right;
+    font-size:max(3em, 26px)!important;
 }
 
-h2{
-    font-size:max(2em, 26px)!important;
-}
 
 /***** articles separate pages *****/
 

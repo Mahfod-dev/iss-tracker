@@ -23,7 +23,7 @@
 }
 
 
-h1{
+.mainTitle{
     position:absolute;
     z-index:3;
     left: -1em;

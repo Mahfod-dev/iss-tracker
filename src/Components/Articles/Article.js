@@ -1,10 +1,11 @@
 import { Link, useParams } from 'react-router-dom'
+
 import style from './Articles.module.css'
 
 export default function Article({ titleArticle, imageArticle, id }) {
 	console.log(id)
 	return (
-		<article className={style.article}>
+		<article className={`${style.article}`}>
 			<div className={style.articleTitle}>
 				<h2>{titleArticle}</h2>
 			</div>
