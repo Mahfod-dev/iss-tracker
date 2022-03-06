@@ -1,0 +1,16 @@
+.container-map {
+    padding: 10px;
+    margin: 60px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 50%;
+    height: 425px;
+}
+
+.Main_container-map__IkljZ {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

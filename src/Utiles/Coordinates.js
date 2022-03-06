@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react'
 import axios from 'axios'
+import style from "./Coordinates.module.css"
 
 const ISS_URL = 'http://api.open-notify.org/iss-now.json'
 
@@ -25,7 +26,7 @@ const Coordinates = () => {
 		}
 	}, [handleLocation])
 
-	return <div>Coordinates : {`${coordinates.lat} ${coordinates.lng}`}</div>
+	return <div className={style["coordinates-container"]}>Coordinates : {`${coordinates.lat} ${coordinates.lng}`}</div>
 }
 
 export default React.memo(Coordinates)
