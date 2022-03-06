@@ -23,7 +23,7 @@ export default function WorldMap() {
 						/>
 					</MapContainer>
 				</FullScreen>
-				<p className={style["parag-map"]}>Maintenant que vous êtes connecté, vous pouvez visualiser la map en cliquent sur le bouton ci-dessous</p>
+				<p className={style["parag-map"]}>Maintenant que vous êtes connecté, vous pouvez visualiser la map en cliquant sur le bouton ci-dessous</p>
 				<span className={style["span-map"]}><img src={arrowSvg} /></span>
 				<button className={style["button-map"]} onClick={handle.enter}>Enter fullscreen</button>
 			</div>
