@@ -40,7 +40,8 @@
 	--clr-font: var(--clr-dark);
 	--clr-primary: #d23669;
 	--clr-h2:var(--clr-white);
-	--linear-grad: linear-gradient(180deg, 
+	--linear-grad: linear-gradient(
+		180deg, 
 		#2F66F2 0%, 
 		rgba(194, 101, 246, 0) 100%);
 	background-image: url('../Assets/SpaceBackgroundBright.jpg');
