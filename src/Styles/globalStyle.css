@@ -8,43 +8,48 @@
 	--clr-white: #ffff;
 	--clr-salmon: #e66e6b;
 	--clr-dark: #252b3b;
-	--dark-button: #C9ECFC;
-	--light-button: #8E4698;
+	--dark-button: #c9ecfc;
+	--light-button: #8e4698;
 	--dark-linear-grad: linear-gradient(
 		180deg,
 		#5f2c4d 0%,
 		rgba(95, 44, 77, 0.708333) 66.67%,
-		rgba(95, 44, 77, 0) 100%);
-	--light-linear-grad: linear-gradient(180deg, 
-		#2F66F2 0%, 
-		rgba(194, 101, 246, 0) 100%);
-	
+		rgba(95, 44, 77, 0) 100%
+	);
+	--light-linear-grad: linear-gradient(
+		180deg,
+		#2f66f2 0%,
+		rgba(194, 101, 246, 0) 100%
+	);
 }
 
 .dark-theme {
-	--dark-button: #C9ECFC;
-	--clr-h2:var(--clr-white);
+	--dark-button: #c9ecfc;
+	--clr-h2: var(--clr-white);
 	--clr-font: #fefaf8;
 	--clr-primary: #ffa7c4;
 	--linear-grad: linear-gradient(
 		180deg,
 		#5f2c4d 0%,
 		rgba(95, 44, 77, 0.708333) 66.67%,
-		rgba(95, 44, 77, 0) 100%);
+		rgba(95, 44, 77, 0) 100%
+	);
 	background-image: url('../Assets/SpaceBackgroundDark.jpg');
 	background-size: cover;
 }
 
 .light-theme {
-	--light-button: #8E4698;
+	--light-button: #8e4698;
 	--clr-font: var(--clr-dark);
 	--clr-primary: #d23669;
-	--clr-h2:var(--clr-white);
-	--linear-grad: linear-gradient(180deg, 
-		#2F66F2 0%, 
-		rgba(194, 101, 246, 0) 100%);
+	--clr-h2: var(--clr-white);
+	--linear-grad: linear-gradient(
+		180deg,
+		#2f66f2 0%,
+		rgba(194, 101, 246, 0) 100%
+	);
 	background-image: url('../Assets/SpaceBackgroundBright.jpg');
-	background-size:cover;
+	background-size: cover;
 }
 
 body {
@@ -54,7 +59,7 @@ body {
 	display: flex;
 	flex-direction: column;
 	background: url('../Assets/body.png') no-repeat;
-	background-position:center top;
+	background-position: center top;
 }
 
 h1,
@@ -68,7 +73,7 @@ a {
 	color: var(--clr-font);
 }
 
-h2{
+h2 {
 	font-family: 'Rubik One', sans-serif;
 	font-size: 1.1rem;
 	color: var(--clr-h2);
@@ -100,7 +105,6 @@ span {
 	color: var(--clr-bcg);
 }
 
-
 /* ---------Shadow-réutilisable--------- */
 
 .shadow {
@@ -109,9 +113,7 @@ span {
 
 /* -----------Footer/Nav------------------ */
 
-footer, nav {
-	background: var(--linear-grad)
+footer,
+nav {
+	background: var(--linear-grad);
 }
-
-
-

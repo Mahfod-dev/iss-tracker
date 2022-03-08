@@ -10,7 +10,7 @@ import style from './NavBar.module.css'
 import { links } from './data.js'
 
 export default function Links() {
-	console.log(links)
+	
 	const { currentUser } = useContext(UserContext)
 
 	const navLink = links.map((link) => {

@@ -14,12 +14,9 @@ const Signin = lazy(() => import('./Components/Authenfication/Signin'))
 const Quiz = lazy(() => import('./Pages/Quiz'))
 const About = lazy(() => import('./Pages/About'))
 const Main = lazy(() => import('./Components/Main/Main'))
-console.log(Header, About, Main)
 
 const App = () => {
 	const { currentUser } = useContext(UserContext)
-
-	console.log(currentUser)
 
 	return (
 		<>
