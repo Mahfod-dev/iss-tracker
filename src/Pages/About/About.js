@@ -1,32 +1,37 @@
-import React from 'react'
+import { useState, useEffect } from 'react'
 
 import Team from './Team/Team.js';
 import Button from '../../UI/Button/Button';
+import MemberDetails from './MemberDetails.js';
+
+import { teamMembers } from './Team/data.js';
 
 import logoWCS from '../../Assets/WCSlogo.png';
 import reactIcon from '../../Assets/reactIcon.png';
 import style from './About.module.css';
 
+// const [show,setShow] = useState(teamMembreShown);
+
+// 	onmouseover =(e=>{ setShow(id); });
+// 	onmouseleave=(e=>{ setShow(4);} );
+
+// const teamMembreShown = 4;
+
 export default function About() {
 	return (
 		<main className={style.aboutTeam}>
-			<div className={style.container}>
-				<div className={style.containerColoredFrame}>
-					<h1 className={style.title}>Notre équipe </h1>
+			
+			{/* <MemberDetails
+				title={teamMembers.longName}
+				memberPresentation={teamMembers.presentation}
+			/> */}
+			
+			<hr />
 
-						<p>
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
-							quis augue massa. Aliquam convallis nec nisl sit amet elementum.
-							Praesent dapibus turpis id odio pellentesque aliquet. Sed maximus
-							lorem sed leo pretium, at porttitor enim condimentum. Pellentesque
-							ac sem laoreet, posuere nisi tincidunt, bibendum est.
-						</p>
-					</div>
-				</div>
-				<hr />
+			<Team props={onmouseleave, onmouseover}/>
 
-			<Team />
 			<article className={style.projectDescription}>
+
 				<div className={style.container}>
 					<div className={style.containerColoredFrame}>
 						<h1 className={style.title}>Le Projet </h1>
@@ -41,12 +46,12 @@ export default function About() {
 								<img src={reactIcon} alt='' />
 							</div>
 						</div>
-
 							<Button />
 					</div>
 				</div>
 
 			</article>
+
 		</main>
 	) 
 }

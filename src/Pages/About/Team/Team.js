@@ -10,6 +10,7 @@ export default function Team(){
                 return (
                     <TeamMemberCard
                         image={imageMember}
+
                     />
                 )
             })}
