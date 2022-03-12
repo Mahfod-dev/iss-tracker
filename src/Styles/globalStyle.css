@@ -71,7 +71,8 @@ a {
 
 h2{
 	font-family: 'Rubik One', sans-serif;
-	font-size: 1.1rem;
+	font-size: 1.8rem;
+	font-weight: 900;
 	color: var(--clr-h2);
 }
 

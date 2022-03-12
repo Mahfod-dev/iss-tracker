@@ -23,7 +23,7 @@
     width:100%;
     z-index:2;
     top: 0.5em;
-    left:0.5em;
+    /* left:0.5em; */
     text-align: right;
     font-size:max(3em, 26px)!important;
 }
@@ -34,7 +34,7 @@
 .frame{
     width: 60%;
     border: solid 3px var(--clr-salmon);
-    padding: 4em 2em 1em 1em;
+    padding-bottom: 3em;
     position:absolute;
     top:0;
 }
@@ -54,21 +54,39 @@
     width:100%;
     z-index:2;
     top: 0.5em;
-    left: 3rem;
+    left: -1rem;
     text-align: left;
     font-size:max(3em, 26px)!important;
 }
 
 .frame p{
-    margin:2em 1em ;
+    margin:6em 2em 4em 5em;
+}
+
+.contentPage{
+    width:70%;
+    float: left;
+    z-index:2;
+}
+
+.numbersContainer{
+    position:absolute;
+    bottom:0;
+    width:100%;
+    height:3em;
+    background-color: var(--clr-salmon);
+    box-sizing: border-box;
+    display: flex;
+    justify-content: right;
+    align-items: center;
 }
 
 .numbers{
-    width:100%;
-    height:2em;
-    background-color: var(--clr-salmon);
-    box-sizing: border-box;
-
+    width:90%;
+    color:#252b3b;
+    font-family: "Rubik One", sans-serif;
+    font-size:22px;
+    font-weight: 900;
 }
 
 /**** photos and images****/
@@ -76,26 +94,31 @@
 /* --photos-position-left:; */
 
 .imageArticle{
-    width:400px;
+    display: inline-block;
+    width:26vw;
+    min-width:16em;
     position:absolute;
-    z-index: index 2;
-    bottom: 0;
+    z-index:2;
+    top: 2vh;
     left: 0;
 }
 
 .photos{
-    float:right;
-    width:250px;
-    height:100%;
+    position:absolute;
+    right:-8em;
+    width:30%;
+    height: 80%;
     display:flex;
     flex-direction: column;
-    justify-content: space-between;
-    background-color: red;
-
+    justify-content: flex-start;
 }
 
 .photo{
-    height:140px;
-    width: auto;
+    height:18vw;
+    width: 18vw;
+    max-width: 220px;
+    max-height: 220px;
     margin:0.5em;
+    object-fit:contain;
+    z-index:4;
 }

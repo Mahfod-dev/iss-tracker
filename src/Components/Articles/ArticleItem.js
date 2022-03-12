@@ -9,19 +9,21 @@ const ArticleItem = () => {
 
 	const articleID = articles.find((article) => article.id === +id)
 	console.log(articleID)
-	const { title, image, content, photos } = articleID
+	const { title, image, content, photos, numbers } = articleID
 
 	return (
 		<main>
 		<article className={style.pageContainer}>
 			<div className={style.frame}>
-				<h1 className={style.pageTitle}>{title}</h1>
-				<p>{content}</p>
-				<div className={style.photos}>
-					<img src={photos[0]} alt='' className={style.photo} />
+			<div className={style.photos}>
 					<img src={photos[1]} alt='' className={style.photo} />
+					<img src={photos[0]} alt='' className={style.photo} />
 				</div>
-				<div className={style.numbers}></div>
+				<h1 className={style.pageTitle}>{title}</h1>
+				<p className={style.contentPage}>{content}</p>
+				<div className={style.numbersContainer}>
+					<div className={style.numbers}>chiffres clès: {numbers}</div>
+				</div>
 			</div>
 			
 			<img src={image} alt='' className={style.imageArticle}/>
