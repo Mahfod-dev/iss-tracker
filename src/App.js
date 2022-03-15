@@ -23,54 +23,54 @@ const App = () => {
 
 	return (
 		<>
-			<NavBar />
-
 			<Routes>
-				<Route
-					path='/'
-					element={
-						<Suspense fallback={<Loader />}>
-							<Header />
-							{currentUser ? <Main /> : <HomePage />}
-						</Suspense>
-					}
-				/>
+				<Route path='/' element={<NavBar />}>
+					<Route
+						index
+						element={
+							<Suspense fallback={<Loader />}>
+								<Header />
+								{currentUser ? <Main /> : <HomePage />}
+							</Suspense>
+						}
+					/>
 
-				<Route
-					path='/apropos'
-					element={
-						<Suspense fallback={<Loader />}>
-							<About />
-						</Suspense>
-					}
-				/>
+					<Route
+						path='/apropos'
+						element={
+							<Suspense fallback={<Loader />}>
+								<About />
+							</Suspense>
+						}
+					/>
 
-				<Route
-					path='quizz'
-					element={
-						<Suspense fallback={<Loader />}>
-							<Quiz />
-						</Suspense>
-					}
-				/>
-				<Route
-					path='sign-in'
-					element={
-						<Suspense fallback={<Loader />}>
-							<Signin />
-						</Suspense>
-					}
-				/>
-				<Route
-					path='sign-up'
-					element={
-						<Suspense fallback={<Loader />}>
-							<Signup />
-						</Suspense>
-					}
-				/>
+					<Route
+						path='quizz'
+						element={
+							<Suspense fallback={<Loader />}>
+								<Quiz />
+							</Suspense>
+						}
+					/>
+					<Route
+						path='sign-in'
+						element={
+							<Suspense fallback={<Loader />}>
+								<Signin />
+							</Suspense>
+						}
+					/>
+					<Route
+						path='sign-up'
+						element={
+							<Suspense fallback={<Loader />}>
+								<Signup />
+							</Suspense>
+						}
+					/>
 
-				<Route path='article/:id' element={<ArticleItem />} />
+					<Route path='article/:id' element={<ArticleItem />} />
+				</Route>
 			</Routes>
 
 			<Footer />
