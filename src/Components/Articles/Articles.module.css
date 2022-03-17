@@ -93,9 +93,9 @@
 
 /* --photos-position-left:; */
 
-.imageArticle{
+.imageArticleLeft{
     display: inline-block;
-    width:26vw;
+    width:20vw;
     min-width:16em;
     position:absolute;
     z-index:2;
@@ -103,7 +103,27 @@
     left: 0;
 }
 
-.photos{
+.imageArticleRight{
+    display: inline-block;
+    width:20vw;
+    min-width:16em;
+    position:absolute;
+    z-index:2;
+    top: 2vh;
+    left: 0;
+}
+
+.imageArticleTopRight{
+    display: inline-block;
+    width:20vw;
+    min-width:16em;
+    position:absolute;
+    z-index:2;
+    top: -8vh;
+    right: 20%;
+}
+
+.photosLeft{
     position:absolute;
     right:-8em;
     width:30%;
@@ -112,6 +132,17 @@
     flex-direction: column;
     justify-content: flex-start;
 }
+
+.photosDown{
+    position:absolute;
+    right:-8em;
+    width:30%;
+    height: 80%;
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
 
 .photo{
     height:18vw;
@@ -122,3 +153,4 @@
     object-fit:contain;
     z-index:4;
 }
+

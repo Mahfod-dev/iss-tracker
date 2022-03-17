@@ -18,6 +18,7 @@ export default function Articles() {
 						id={id}
 						titleArticle={title}
 						imageArticle={imageFront}
+
 					/>
 				)
 			})}
