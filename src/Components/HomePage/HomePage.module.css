@@ -1,7 +1,14 @@
 .container-map {
     width: 80%;
+    margin: 0 auto;
     height: auto;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+p {
+    text-align: center;
+    padding: 100px;
+    font-weight: bold;
 }
