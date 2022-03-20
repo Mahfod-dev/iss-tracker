@@ -8,7 +8,7 @@ import style from './NavBar.module.css'
 
 export default function NavBar() {
 	return (
-		<>
+		<div>
 			<nav>
 				<div className={style.containerNavbar}>
 					<Logo />
@@ -17,6 +17,6 @@ export default function NavBar() {
 				</div>
 			</nav>
 			<Outlet />
-		</>
+		</div>
 	)
 }

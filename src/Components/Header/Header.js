@@ -12,7 +12,7 @@ const Header = () => {
 				<div className={style.introduction}>
 					<div className={style.introductionFrame}>
 						<h1 className={style.mainTitle}>Le titre de notre site web </h1>
-
+						<Article />
 						<p>
 							'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
 							quis augue massa. Aliquam convallis nec nisl sit amet elementum.
@@ -23,7 +23,6 @@ const Header = () => {
 					</div>
 				</div>
 				<hr />
-				<Article />
 			</div>
 		</>
 	)
