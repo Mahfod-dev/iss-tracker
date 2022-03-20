@@ -1,6 +1,6 @@
-import { useState, useMemo, useEffect } from 'react'
+import { useState, useContext } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
-import debounce from 'lodash.debounce'
+import { UserContext } from '../../context/UserContext'
 import {
 	signInAuthUserWithEmailAndPassword,
 	signInWithGooglePopup,
@@ -15,8 +15,14 @@ const defaultFormFields = {
 const Signin = () => {
 	const navigate = useNavigate()
 
+	const { currentUser } = useContext(UserContext)
+
 	const [formFields, setFormFields] = useState(defaultFormFields)
 	const { email, password } = formFields
+
+	if (currentUser) {
+		navigate('/')
+	}
 
 	const resetFormFields = () => {
 		setFormFields(defaultFormFields)
@@ -90,7 +96,7 @@ const Signin = () => {
 				<div className={classes['user-box']}>
 					<div className={classes['user-box']}>
 						<input
-							className={classes["input-form"]}
+							className={classes['input-form']}
 							type='email'
 							id='email'
 							required
@@ -103,7 +109,7 @@ const Signin = () => {
 				</div>
 				<div className={classes['user-box']}>
 					<input
-						className={classes["input-form"]}
+						className={classes['input-form']}
 						type='password'
 						id='password'
 						required
@@ -114,9 +120,15 @@ const Signin = () => {
 					<label htmlFor='password'>Your Password</label>
 				</div>
 				<div>
-					<button className={classes["button-form"]} type='submit'>Login</button>
-					<button className={classes["button-form"]} onClick={signInWithGooglePopup}>Google</button>
-					<button className={classes["button-form"]}>
+					<button className={classes['button-form']} type='submit'>
+						Login
+					</button>
+					<button
+						className={classes['button-form']}
+						onClick={signInWithGooglePopup}>
+						Google
+					</button>
+					<button className={classes['button-form']}>
 						<Link to='/sign-up'>Sign Up Instead</Link>
 					</button>
 				</div>
