@@ -9,9 +9,14 @@ import { UserContext } from '../../context/UserContext'
 import style from './NavBar.module.css'
 import { links } from './data.js'
 
+import { firstName } from '../../Utiles/utils/utilsFunc'
+
 export default function Links() {
-	
 	const { currentUser } = useContext(UserContext)
+
+	console.log(
+		currentUser === null ? 'signIn' : firstName(currentUser.displayName)
+	)
 
 	const navLink = links.map((link) => {
 		return (
@@ -27,17 +32,23 @@ export default function Links() {
 		<div className={style.containerLinks}>
 			<ul>
 				{navLink}
+
 				<li>
-					{currentUser ? (
-						<Link to='/' onClick={signOutUser}>
-							Sign out
-						</Link>
-					) : (
+					{currentUser === null ? (
 						<Link
 							to='/sign-in
 						'>
 							<h3>Sign in</h3>
 						</Link>
+					) : (
+						<ul>
+							<li>{firstName(currentUser.displayName)}</li>
+							<li>
+								<Link to='/' onClick={signOutUser}>
+									Sign out
+								</Link>
+							</li>
+						</ul>
 					)}
 				</li>
 			</ul>
