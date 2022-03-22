@@ -26,6 +26,10 @@ const Signin = () => {
 	const [formFields, setFormFields] = useState(defaultFormFields)
 	const { email, password } = formFields
 
+	if (currentUser) {
+		navigate('/')
+	}
+
 	const resetFormFields = () => {
 		setFormFields(defaultFormFields)
 	}

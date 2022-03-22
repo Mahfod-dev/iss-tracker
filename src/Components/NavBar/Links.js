@@ -66,6 +66,15 @@ export default function Links() {
 						'>
 							<h3>Sign in</h3>
 						</Link>
+					) : (
+						<ul>
+							<li>{firstName(currentUser.displayName)}</li>
+							<li>
+								<Link to='/' onClick={signOutUser}>
+									Sign out
+								</Link>
+							</li>
+						</ul>
 					)}
 				</li> */}
 		</ul>
