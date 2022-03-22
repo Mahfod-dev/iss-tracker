@@ -1,6 +1,7 @@
 .header {
 	width: 100%;
 	display: flex;
+	margin: 8rem auto;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
@@ -14,7 +15,7 @@
 
 .introduction {
 	width: 60%;
-	/* position:relative; */
+	position: relative;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -23,6 +24,7 @@
 
 .mainTitle {
 	position: absolute;
+
 	z-index: 3;
 	left: -1em;
 	top: 0.3em;

@@ -4,6 +4,7 @@
 	width: 836px;
 	display: flex;
 	justify-content: space-between;
+	margin-top: 2rem;
 }
 
 .article {
@@ -26,6 +27,9 @@
 	left: 0.05em;
 	text-align: right;
 	font-size: max(3em, 26px) !important;
+}
+p {
+	margin-top: 1rem;
 }
 
 /***** articles separate pages *****/

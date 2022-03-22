@@ -29,34 +29,33 @@ export default function Links() {
 	})
 
 	return (
-		<div className={style.containerLinks}>
-			<ul>
-				{navLink}
+		<ul className={style.containerLinks}>
+			{navLink}
 
-				<li>
-					{currentUser === null ? (
-						<Link
-							to='/sign-in
+			<li>
+				{currentUser === null ? (
+					<Link
+						to='/sign-in
 						'>
-							<h3>Sign in</h3>
-						</Link>
-					) : (
-						<ul>
-							<li>{firstName(currentUser.displayName)}</li>
-							<li>
-								<Link to='/' onClick={signOutUser}>
-									Sign out
-								</Link>
-							</li>
-						</ul>
-					)}
-				</li>
-				{/* <li>
+						<h3>Sign in</h3>
+					</Link>
+				) : (
+					<ul>
+						<li>{firstName(currentUser.displayName)}</li>
+						<li>
+							<Link to='/' onClick={signOutUser}>
+								Sign out
+							</Link>
+						</li>
+					</ul>
+				)}
+			</li>
+			{/* <li>
 					<Link to='/' onClick={signOutUser}>
 						Sign out
 					</Link>
 				</li> */}
-				{/* <li>
+			{/* <li>
 					{currentUser ? (
 						<Link to='/' onClick={signOutUser}>
 							Sign out
@@ -69,7 +68,6 @@ export default function Links() {
 						</Link>
 					)}
 				</li> */}
-			</ul>
-		</div>
+		</ul>
 	)
 }

@@ -8,15 +8,13 @@ import style from './NavBar.module.css'
 
 export default function NavBar() {
 	return (
-		<div>
+		<>
 			<nav>
-				<div className={style.containerNavbar}>
-					<Logo />
-					<Links />
-					<BrightMode />
-				</div>
+				<Logo />
+				<Links />
+				<BrightMode />
 			</nav>
 			<Outlet />
-		</div>
+		</>
 	)
 }
