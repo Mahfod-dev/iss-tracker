@@ -1,7 +1,7 @@
 import React from 'react'
 import Article from '../Articles/Articles'
 
-import Hr from '../../UI/Hr/Hr.js'
+
 
 import style from './Header.module.css'
 
