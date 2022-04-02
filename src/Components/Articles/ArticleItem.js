@@ -7,12 +7,13 @@ const ArticleItem = () => {
 
 	const articleID = articles.find((article) => article.id === +id)
 	console.log(articleID)
-	const { title, imageFront } = articleID
+	const { title, imageFront, content } = articleID
 	return (
-		<div style={{ color: 'white' }}>
+		<div className={style.articlesContainer} style={{ color: 'white' }}>
 			{title}
 
-			<img src={imageFront} alt='' />
+			<img className={style.image} src={imageFront} alt='' />
+			<p>{content}</p>
 		</div>
 	)
 }
