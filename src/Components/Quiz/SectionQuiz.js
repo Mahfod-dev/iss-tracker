@@ -43,9 +43,11 @@ const SectionQuiz = () => {
 			<section className={`${
 				isModalOpen ? style['unactive-quiz'] : style.quiz
 			}`}>
-				<p className={style["correct-answers"]}>
-					Correct answers: {correct} / {index}
-				</p>
+				<div className={style["container-correct-answers"]}>
+					<p>
+						Correct answers: {correct} / {index}
+					</p>
+				</div>
 				<article className={style.container}>
 					<h2 dangerouslySetInnerHTML={{ __html: question }} />
 
