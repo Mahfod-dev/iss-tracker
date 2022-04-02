@@ -168,13 +168,13 @@ main {
 
 .container {
 	height: 80%;
-	
-	
-	background-color: blue;
+	/* background-color: blue; */
 }
 
 .container h2 {
 	margin-bottom: 2rem;
+	color: black;
+	font-size: 1.6rem;
 	text-align: center;
 	line-height: 1.5;
 	text-transform: none;
@@ -205,7 +205,6 @@ main {
 .correct-answers {
 	height: 20%;
 	font-size: 1rem;
-	margin-bottom: 2rem;
 	text-align: right;
 	text-transform: capitalize;
 	letter-spacing: var(--spacing);
