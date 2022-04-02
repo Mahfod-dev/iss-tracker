@@ -24,7 +24,7 @@ const SetupForm = () => {
 					</div>
 					{/* category */}
 
-					<div className='form-control'>
+					<div className={style['form-control']}>
 						<label htmlFor='category'>category</label>
 						<select
 							name='category'

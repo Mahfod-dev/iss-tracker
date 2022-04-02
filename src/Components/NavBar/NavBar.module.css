@@ -45,6 +45,14 @@ nav {
 	cursor: pointer;
 }
 
+
+.signed-name {
+	font-size: 1.2rem;
+	position: absolute;
+	right: 225px;
+	top: 58px;
+} 
+
 #logo {
 	width: 20%;
 	display: flex;
@@ -58,3 +66,4 @@ nav {
 	align-self: center;
 	margin-right: 1em;
 }
+

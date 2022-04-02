@@ -144,21 +144,35 @@ Quiz
 
 main {
 	min-height: 70vh;
+	width: 90%;
+	margin: 0 auto;
 	display: flex;
 	justify-content: center;
-	align-items: center;
 }
+
 .quiz {
 	width: 70vw;
+	height: 60vh;
 	max-width: var(--max-width);
-	margin: 4rem auto;
+	margin: 3rem auto;
 	background: var(--clr-white);
 	border-radius: var(--radius);
 	padding: 3rem;
+	display: flex;
+	flex-direction: column;
+
 }
 .quiz-small {
 	max-width: 500px;
 }
+
+.container {
+	height: 80%;
+	
+	
+	background-color: blue;
+}
+
 .container h2 {
 	margin-bottom: 2rem;
 	text-align: center;
@@ -189,6 +203,7 @@ main {
 	color: var(--clr-white);
 }
 .correct-answers {
+	height: 20%;
 	font-size: 1rem;
 	margin-bottom: 2rem;
 	text-align: right;
@@ -204,8 +219,7 @@ main {
 	padding: 0.25rem 0.5rem;
 	display: block;
 	width: 35%;
-	margin-left: auto;
-	margin-top: 2rem;
+	margin: 2.5rem auto;
 	text-transform: capitalize;
 	font-weight: 700;
 	letter-spacing: var(--spacing);
@@ -226,7 +240,9 @@ Form
 */
 
 .setup-form h2 {
+	text-align: center;
 	margin-bottom: 2rem;
+	font-size: 1.4rem;
 }
 .form-control {
 	margin-bottom: 2rem;
@@ -235,12 +251,12 @@ Form
 	display: block;
 	text-transform: capitalize;
 	font-weight: 500;
-	color: var(--clr-red-dark);
+	color: var(--clr-primary-10);
 	margin-bottom: 0.5rem;
 }
 .form-input {
 	border: none;
-	background: var(--clr-red-dark);
+	background: var(--clr-primary-6);
 	font-size: 1rem;
 	padding: 0.25rem 0.5rem;
 	width: 100%;
@@ -253,6 +269,7 @@ Form
 .submit-btn {
 	width: 100%;
 	margin-top: 3rem;
+	background-color: #C9ECFC;
 }
 /*
 =============== 

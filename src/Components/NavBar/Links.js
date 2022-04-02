@@ -42,7 +42,7 @@ export default function Links() {
 						</Link>
 					) : (
 						<ul>
-							<li>{firstName(currentUser.displayName)}</li>
+							<li className={style["signed-name"]} >{`Bonjour ${firstName(currentUser.displayName)}`}</li>
 							<li>
 								<Link to='/' onClick={signOutUser}>
 									Sign out
