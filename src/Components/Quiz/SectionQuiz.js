@@ -38,10 +38,10 @@ const SectionQuiz = () => {
 
 	return (
 		<main>
-			<Modal />
+			{/* <Modal /> */}
 			<section className={style.quiz}>
 				<p className={style["correct-answers"]}>
-					Correct answers:{correct} / {index}
+					Correct answers: {correct} / {index}
 				</p>
 				<article className={style.container}>
 					<h2 dangerouslySetInnerHTML={{ __html: question }} />
