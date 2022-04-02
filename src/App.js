@@ -34,7 +34,7 @@ const App = () => {
 					/>
 
 					<Route
-						path='/apropos'
+						path='/about'
 						element={
 							<Suspense fallback={<Loader />}>
 								<About />
@@ -43,7 +43,7 @@ const App = () => {
 					/>
 
 					<Route
-						path='quizz'
+						path='quiz'
 						element={
 							<Suspense fallback={<Loader />}>
 								<Quiz />

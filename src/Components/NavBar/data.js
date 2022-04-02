@@ -1,13 +1,13 @@
 export const links = [
-	{ id: 1, url: '/', text: 'Accueil' },
+	{ id: 1, url: '/', text: 'Home' },
 	{
 		id: 2,
-		url: '/apropos',
-		text: 'A propos',
+		url: '/about',
+		text: 'About',
 	},
 	{
 		id: 3,
-		url: '/quizz',
-		text: 'Testez-vous',
+		url: '/quiz',
+		text: 'Quiz',
 	},
 ]
