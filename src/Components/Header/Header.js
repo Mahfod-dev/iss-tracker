@@ -1,17 +1,18 @@
 import React from 'react'
 import Article from '../Articles/Articles'
 
-import Hr from '../../UI/Hr/Hr.js'
+
 
 import style from './Header.module.css'
 
 const Header = () => {
 	return (
 		<>
-			<div className={style.header}>
+			<header className={style.header}>
 				<div className={style.introduction}>
 					<div className={style.introductionFrame}>
 						<h1 className={style.mainTitle}>Le titre de notre site web </h1>
+						<Article />
 
 						<p>
 							'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
@@ -23,8 +24,7 @@ const Header = () => {
 					</div>
 				</div>
 				<hr />
-				<Article />
-			</div>
+			</header>
 		</>
 	)
 }
