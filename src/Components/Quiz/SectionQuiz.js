@@ -16,6 +16,7 @@ const SectionQuiz = () => {
 		correct,
 		nextQuestion,
 		checkAnswer,
+		isModalOpen
 	} = useContextQuiz()
 
 	if (waiting) {
@@ -38,8 +39,10 @@ const SectionQuiz = () => {
 
 	return (
 		<main>
-			{/* <Modal /> */}
-			<section className={style.quiz}>
+			<Modal />
+			<section className={`${
+				isModalOpen ? style['unactive-quiz'] : style.quiz
+			}`}>
 				<p className={style["correct-answers"]}>
 					Correct answers: {correct} / {index}
 				</p>
