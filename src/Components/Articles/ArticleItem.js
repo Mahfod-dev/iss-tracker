@@ -10,9 +10,11 @@ const ArticleItem = () => {
 	const { title, imageFront, content } = articleID
 	return (
 		<div className={style.articlesContainer} style={{ color: 'white' }}>
-			{title}
-
-			<img className={style.image} src={imageFront} alt='' />
+			<div className={style.articleContainerTitleImg}>
+				<h3 className={style.articlePageTitle}>{title}</h3>
+				<img className={style.image} src={imageFront} alt='' />
+			</div>
+			
 			<p>{content}</p>
 		</div>
 	)

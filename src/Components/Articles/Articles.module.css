@@ -11,15 +11,27 @@
 	width: 197px;
 	position: relative;
 }
-image {
-	width: 300px;
-	height: 300px;
-}
 .article img {
 	width: 186px;
 	height: auto;
 	top: 0;
 	box-shadow: -7px 9px 4px 6px rgba(31, 34, 43, 0.46);
+}
+
+.image {
+	margin-top: 50px;
+	width: 300px;
+	height: 375px;
+}
+
+.articleContainerTitleImg {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.articlePageTitle {
+	font-size: 1.9rem;
 }
 
 .articleTitle {
