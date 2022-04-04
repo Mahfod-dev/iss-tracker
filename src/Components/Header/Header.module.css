@@ -10,7 +10,7 @@
 .introductionFrame {
 	width: 100%;
 	border: solid 3px #ff807e;
-	padding: 4em 2em 1em 1em;
+	padding: 3em 2em 1em 1em;
 }
 
 .introduction {
@@ -24,7 +24,6 @@
 
 .mainTitle {
 	position: absolute;
-
 	z-index: 3;
 	left: -1em;
 	top: 0.3em;

@@ -122,6 +122,7 @@ li,
 a {
 	font-family: 'Rubik One', sans-serif;
 	color: var(--clr-font);
+	font-weight: bold;
 }
 
 h1 {
