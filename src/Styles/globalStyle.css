@@ -67,6 +67,13 @@ body {
 	flex-direction: column;
 }
 
+ul li {
+	list-style-type:none ;
+}
+a {
+	text-decoration: none;
+}
+
 h1,
 h3,
 h4,
