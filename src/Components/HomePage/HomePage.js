@@ -5,7 +5,7 @@ export default function HomePage() {
 	return (
 
 		<div className={style["container-map"]}>
-			<p> Merci de vous connecter pour acceder a la carte</p>
+			<p> Merci de vous connecter pour acceder à la carte</p>
 		</div>
 		
 			
