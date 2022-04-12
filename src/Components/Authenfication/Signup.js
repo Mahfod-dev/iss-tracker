@@ -103,12 +103,17 @@ const Signup = () => {
 					/>
 					<label htmlFor='confirmPassword'>Confirm Password</label>
 				</div>
-				<div>
+
+				<div className="btn-container">
+					
 					<button type='submit'>Login</button>
-				</div>
+				
 				<button>
 					<Link to='/sign-in'>Sign Up Instead</Link>
 				</button>
+
+				</div>
+				
 			</form>
 		</section>
 	)

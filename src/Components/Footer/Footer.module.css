@@ -40,3 +40,11 @@ button {
 	padding-left: 0.5em;
 	color: black;
 }
+
+.legal-notice {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 50%;
+}

@@ -11,14 +11,11 @@ const Header = () => {
 			<header className={style.header}>
 				<div className={style.introduction}>
 					<div className={style.introductionFrame}>
-						<h1 className={style.mainTitle}>Le titre de notre site web </h1>
+						<h1 className={style.mainTitle}>Realtime ISS station </h1>
 
 						<p>
-							'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
-							quis augue massa. Aliquam convallis nec nisl sit amet elementum.
-							Praesent dapibus turpis id odio pellentesque aliquet. Sed maximus
-							lorem sed leo pretium, at porttitor enim condimentum. Pellentesque
-							ac sem laoreet, posuere nisi tincidunt, bibendum est.'
+						The International Space Station (ISS) is a habitable artificial satellite in low Earth orbit. It is a multinational collaborative project involving five participating space agencies: NASA (United States), Roscosmos (Russia), JAXA (Japan), ESA (Europe), and CSA (Canada).
+						Within this website we offer you access to a world map that allows you to track ISS`s position upon signing up. In addition you can benefit from a number of educational ressources that will help you deepen your knowledge about the ISS.t. Enjoy your visit !
 						</p>
 					</div>
 				</div>
