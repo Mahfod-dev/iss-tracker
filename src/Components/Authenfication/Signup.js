@@ -60,55 +60,50 @@ const Signup = () => {
 				<div className={classes['user-box']}>
 					<div className={classes['user-box']}>
 						<input
-							label='Display Name'
-							type='text'
+							className={classes['input-form']}
+							type='email'
+							id='email'
 							required
 							onChange={handleChange}
-							name='displayName'
-							value={displayName}
+							name='email'
+							value={email}
 						/>
-						<label htmlFor='displayName'>Your Name</label>
+						<label htmlFor='email'>Your Email</label>
 					</div>
 				</div>
 				<div className={classes['user-box']}>
 					<input
-						label='Email'
-						type='email'
-						required
-						onChange={handleChange}
-						name='email'
-						value={email}
-					/>
-					<label htmlFor='email'>Your Email</label>
-				</div>
-				<div className={classes['user-box']}>
-					<input
-						label='Password'
+						className={classes['input-form']}
 						type='password'
+						id='password'
 						required
 						onChange={handleChange}
 						name='password'
 						value={password}
 					/>
-					<label htmlFor='email'>Your Password</label>
+					<label htmlFor='password'>Your Password</label>
 				</div>
 				<div className={classes['user-box']}>
 					<input
-						label='Confirm Password'
-						type='password'
+						className={classes['input-form']}
+						type='confirmPassword'
+						id='confirmPassword'
 						required
 						onChange={handleChange}
-						name='confirmPassword'
+						name='password'
 						value={confirmPassword}
 					/>
-					<label htmlFor='confirmPassword'>Confirm Password</label>
+					<label htmlFor='password'>Confirm Your Password</label>
 				</div>
 				<div>
-					<button type='submit'>Login</button>
+					<button className={classes['button-form']} type='submit'>
+						Login
+					</button>
+
+					<button className={classes['button-form']}>
+						<Link to='/sign-in'>Sign In</Link>
+					</button>
 				</div>
-				<button>
-					<Link to='/sign-in'>Sign Up Instead</Link>
-				</button>
 			</form>
 		</section>
 	)
