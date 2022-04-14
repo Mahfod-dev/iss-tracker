@@ -1,5 +1,5 @@
 .section {
-	min-height: 100vh;
+	min-height: 60vh;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -20,7 +20,7 @@
 	padding: 3rem;
 }
 .quiz-small {
-	max-width: 500px;
+	max-width: 400px;
 }
 
 .container h2 {
@@ -75,7 +75,7 @@
 	font-weight: 700;
 	letter-spacing: var(--spacing);
 	font-size: 1rem;
-	background: #ffb100;
+	background: #c9ecfc;
 	color: var(--clr-black);
 	transition: var(--transition);
 	cursor: pointer;
@@ -112,9 +112,9 @@ Form
 	border-radius: var(--radius);
 }
 .error {
-	color: var(--clr-red-dark);
+	color: red;
 	text-transform: capitalize;
-	height: 100px;
+	height: 30px;
 }
 .submit-btn {
 	width: 100%;

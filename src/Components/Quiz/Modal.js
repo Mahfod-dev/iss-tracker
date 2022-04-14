@@ -1,22 +1,21 @@
 import React from 'react'
 import { useContextQuiz } from '../../context/contextQuiz'
-import style from "./Quiz.module.css"
-
+import style from './quiz.css'
 
 const Modal = () => {
 	const { isModalOpen, closeModal, correct, questions } = useContextQuiz()
-	return ( 
+	return (
 		<div
 			className={`${
-				isModalOpen ? style['modal-container isOpen'] : style['modal-container']
+				isModalOpen ? 'modal-container isOpen' : 'modal-container'
 			}`}>
-			<div className={style['modal-content']}>
-				<h2>Congrats !</h2>
+			<div className='modal-content'>
+				<h2>congrats!</h2>
 				<p>
 					You answered {((correct / questions.length) * 100).toFixed(0)}% of
 					questions correctly
 				</p>
-				<button className={style['close-btn']} onClick={closeModal}>
+				<button className='close-btn' onClick={closeModal}>
 					play again
 				</button>
 			</div>

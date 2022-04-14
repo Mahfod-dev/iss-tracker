@@ -112,6 +112,8 @@
 .info {
 	margin-bottom: 0.75rem;
 	padding: 2px;
+	color: blueviolet;
+	opacity: 0.9;
 }
 .prev-btn,
 .next-btn {

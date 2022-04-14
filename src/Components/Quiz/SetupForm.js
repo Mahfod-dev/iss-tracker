@@ -1,6 +1,6 @@
 import React from 'react'
 import { useContextQuiz } from '../../context/contextQuiz'
-import './Quiz.css'
+import './quiz.css'
 
 const SetupForm = () => {
 	const { quiz, handleChange, handleSubmit, error } = useContextQuiz()

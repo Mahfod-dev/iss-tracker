@@ -1,6 +1,6 @@
 import React from 'react'
 import { useContextQuiz } from '../../context/contextQuiz'
-import './Quiz.css'
+import './quiz.css'
 import SetupForm from './SetupForm'
 import Loading from './Loading'
 import Modal from './Modal'
