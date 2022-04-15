@@ -63,6 +63,20 @@ const Signup = () => {
 					<div className={classes['user-box']}>
 						<input
 							className={classes['input-form']}
+							type='name'
+							id='displayName'
+							required
+							onChange={handleChange}
+							name='displayName'
+							value={displayName}
+						/>
+						<label htmlFor='email'>Your Name</label>
+					</div>
+				</div>
+				<div className={classes['user-box']}>
+					<div className={classes['user-box']}>
+						<input
+							className={classes['input-form']}
 							type='email'
 							id='email'
 							required
