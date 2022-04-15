@@ -1,10 +1,20 @@
 /***** articles front page*****/
 
-.articlesContainer {
+.articleContainer {
+	height: 80vh;
+	margin: 3rem auto;
 	display: flex;
-	margin-top: 10em;
 	justify-content: center;
+	align-items: center;
 }
+
+.articlesHomepage {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 8vh auto 0;
+}
+
 .image {
 	margin-top: 50px;
 	margin: 2rem;
