@@ -11,13 +11,13 @@
 	max-width: var(--max-width); */
 }
 .quiz {
-	width: 70vw;
+	width: 60vw;
 	max-width: var(--max-width);
-	height: auto;
-	margin: 8rem auto;
-	background: var(--clr-white);
+	height: 700px;
+	margin: 7rem auto;
+	background: var(--linear-grad);
 	border-radius: var(--radius);
-	padding: 3rem;
+	padding: 2rem;
 }
 .quiz-small {
 	max-width: 400px;
@@ -40,7 +40,7 @@
 	letter-spacing: var(--spacing);
 	font-size: 1rem;
 	cursor: pointer;
-	padding: 1rem 0;
+	padding: 1rem 0.5rem;
 	transition: var(--transition);
 }
 @media screen and (min-width: 576px) {
@@ -59,7 +59,7 @@
 	text-align: right;
 	text-transform: capitalize;
 	letter-spacing: var(--spacing);
-	color: var(--clr-green-dark);
+	color: var(--clr-primary-5);
 }
 .next-question,
 .close-btn,
@@ -94,13 +94,13 @@ Form
 	margin-bottom: 2rem;
 }
 .form-control {
-	margin-bottom: 2rem;
+	margin-bottom: 1rem;
 }
 .form-control label {
 	display: block;
 	text-transform: capitalize;
 	font-weight: 500;
-	color: var(--clr-grey-3);
+	color: var(--clr-title);
 	margin-bottom: 0.5rem;
 }
 .form-input {
@@ -115,14 +115,13 @@ Form
 	color: red;
 	text-transform: capitalize;
 	height: 100px;
-	margin-bottom: 100px;
 }
 .submit-btn {
 	width: 100%;
 	margin-top: 3rem;
 }
 .title-quiz {
-	color: black;
+	color: var(--clr-title);
 }
 /*
 =============== 
@@ -166,7 +165,7 @@ Loading
 }
 
 .modal-content {
-	background: var(--clr-white);
+	background: var(--clr-primary);
 	width: 90vw;
 	max-width: var(--fixed-width);
 	padding: 3rem;

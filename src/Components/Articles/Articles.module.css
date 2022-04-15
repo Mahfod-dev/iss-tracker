@@ -2,7 +2,6 @@
 
 .articlesContainer {
 	display: flex;
-	min-height: 100vh;
 	margin-top: 10em;
 	justify-content: center;
 }
