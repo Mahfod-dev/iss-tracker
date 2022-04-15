@@ -6,7 +6,7 @@ const ArticleItem = () => {
 	const { id } = useParams()
 
 	const articleID = articles.find((article) => article.id === +id)
-	console.log(articleID)
+
 	const { title, imageFront, content } = articleID
 	return (
 		<div className={style.articlesContainer} style={{ color: 'white' }}>
@@ -14,8 +14,8 @@ const ArticleItem = () => {
 				<h3 className={style.articlePageTitle}>{title}</h3>
 				<img className={style.image} src={imageFront} alt='' />
 			</div>
-			
-			<p>{content}</p>
+
+			<p className={style.content}>{content}</p>
 		</div>
 	)
 }
