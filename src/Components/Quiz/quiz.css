@@ -114,7 +114,8 @@ Form
 .error {
 	color: red;
 	text-transform: capitalize;
-	height: 30px;
+	height: 100px;
+	margin-bottom: 100px;
 }
 .submit-btn {
 	width: 100%;
