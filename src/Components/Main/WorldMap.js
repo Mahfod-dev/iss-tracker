@@ -23,13 +23,13 @@ export default function WorldMap(props) {
 							url='https://{s}.tile.openstreetmap.de/tiles/osmde/{z}/{x}/{y}.png'
 						/>
 						<Marker position={props.coordinates} icon={iconPerson}>
-							<Popup>International spatial station</Popup>
+							{/* <Popup>International spatial station</Popup> */}
 						</Marker>
 					</MapContainer>
 				</FullScreen>
 				<p className={style['parag-map']}>
-					Maintenant que vous êtes connecté, vous pouvez visualiser la map en
-					cliquant sur le bouton ci-dessous
+					Now that you are logged in, you can view the map by
+					clicking on the button below
 				</p>
 				<span className={style['span-map']}>
 					<img src={arrowSvg} />

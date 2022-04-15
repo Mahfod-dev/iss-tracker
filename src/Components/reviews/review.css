@@ -100,6 +100,9 @@
 	border-radius: 50%;
 }
 .author {
+	font-size: 1.5rem;
+	color: blueviolet;
+	opacity: 0.9;
 	margin-bottom: 0.25rem;
 }
 .job {
@@ -110,6 +113,8 @@
 	font-size: 0.85rem;
 }
 .info {
+	color: blueviolet;
+	opacity: 0.9;
 	margin-bottom: 0.75rem;
 	padding: 2px;
 	color: blueviolet;
