@@ -3,6 +3,7 @@ import { useContextQuiz } from '../../context/contextQuiz'
 import './quiz.css'
 import SetupForm from './SetupForm'
 import Loading from './Loading'
+import Loader from '../../UI/Loader/Loader'
 import Modal from './Modal'
 function SectionQuiz() {
 	const {
@@ -18,7 +19,7 @@ function SectionQuiz() {
 		return <SetupForm />
 	}
 	if (loading) {
-		return <Loading />
+		return <Loader />
 	}
 
 	const { question, incorrect_answers, correct_answer } = questions[index]
