@@ -33,6 +33,8 @@ const Signup = () => {
 		try {
 			const { user } = await createAuthUserWithEmailAndPassword(email, password)
 
+			console.log(user)
+
 			await createUserDocumentFromAuth(user, { displayName })
 			console.log('add Modal')
 
@@ -86,11 +88,11 @@ const Signup = () => {
 				<div className={classes['user-box']}>
 					<input
 						className={classes['input-form']}
-						type='confirmPassword'
+						type='password'
 						id='confirmPassword'
 						required
 						onChange={handleChange}
-						name='password'
+						name='confirmPassword'
 						value={confirmPassword}
 					/>
 					<label htmlFor='password'>Confirm Your Password</label>

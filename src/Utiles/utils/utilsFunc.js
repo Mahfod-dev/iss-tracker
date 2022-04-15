@@ -1,3 +1,3 @@
 export const firstName = (str) => {
-	return str.split(' ')[0]
+	return str === null ? 'login' : str.split(' ')[0]
 }
