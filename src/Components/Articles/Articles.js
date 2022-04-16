@@ -10,7 +10,7 @@ import PlanetFrontPage from '../../Assets/PlanetFrontPage.png'
 
 export default function Articles() {
 	return (
-		<div className={style.articlesContainer}>
+		<div className={style.articlesHomepage}>
 			{articles.map(({ title, imageFront, id }) => {
 				return (
 					<Article
