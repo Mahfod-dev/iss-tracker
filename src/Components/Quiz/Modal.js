@@ -1,6 +1,5 @@
 import React from 'react'
 import { useContextQuiz } from '../../context/contextQuiz'
-import style from './quiz.css'
 
 const Modal = () => {
 	const { isModalOpen, closeModal, correct, questions } = useContextQuiz()

@@ -1,8 +1,8 @@
 import React from 'react'
 import { useContextQuiz } from '../../context/contextQuiz'
+import DOMPurify from 'dompurify'
 import './quiz.css'
 import SetupForm from './SetupForm'
-import Loading from './Loading'
 import Loader from '../../UI/Loader/Loader'
 import Modal from './Modal'
 function SectionQuiz() {
@@ -18,13 +18,16 @@ function SectionQuiz() {
 	if (waiting) {
 		return <SetupForm />
 	}
-	if (!loading) {
+	if (loading) {
 		return <Loader />
 	}
 
 	const { question, incorrect_answers, correct_answer } = questions[index]
-	// const answers = [...incorrect_answers, correct_answer]
 	let answers = [...incorrect_answers]
+	const clean = DOMPurify.sanitize(question)
+
+	// const answers = [...incorrect_answers, correct_answer]
+
 	const tempIndex = Math.floor(Math.random() * 4)
 	if (tempIndex === 3) {
 		answers.push(correct_answer)
@@ -32,6 +35,7 @@ function SectionQuiz() {
 		answers.push(answers[tempIndex])
 		answers[tempIndex] = correct_answer
 	}
+
 	return (
 		<main>
 			<Modal />
@@ -40,19 +44,17 @@ function SectionQuiz() {
 					correct answers : {correct}/{index}
 				</p>
 				<article className='container'>
-					<h2
-						className='title-quiz'
-						dangerouslySetInnerHTML={{ __html: question }}
-					/>
+					<h2 className='title-quiz'>{clean}</h2>
 					<div className='btn-container'>
 						{answers.map((answer, index) => {
+							const answerB = DOMPurify.sanitize(answer)
 							return (
 								<button
 									key={index}
 									className='answer-btn'
-									onClick={() => checkAnswer(correct_answer === answer)}
-									dangerouslySetInnerHTML={{ __html: answer }}
-								/>
+									onClick={() => checkAnswer(correct_answer === answerB)}>
+									{answerB}
+								</button>
 							)
 						})}
 					</div>

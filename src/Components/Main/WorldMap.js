@@ -1,7 +1,6 @@
 import React from 'react'
-import { useRef, useMemo } from 'react'
 import { FullScreen, useFullScreenHandle } from 'react-full-screen'
-import { MapContainer, Marker, Popup, TileLayer } from 'react-leaflet'
+import { MapContainer, Marker, TileLayer } from 'react-leaflet'
 import { iconPerson } from './spacialStationIcon'
 import style from './worldMap.module.css'
 import arrowSvg from '../../Assets/down-arrow-svgrepo-com.svg'
@@ -28,11 +27,11 @@ export default function WorldMap(props) {
 					</MapContainer>
 				</FullScreen>
 				<p className={style['parag-map']}>
-					Now that you are logged in, you can view the map by
-					clicking on the button below
+					Now that you are logged in, you can view the map by clicking on the
+					button below
 				</p>
 				<span className={style['span-map']}>
-					<img src={arrowSvg} />
+					<img src={arrowSvg} alt='iss' />
 				</span>
 				<button className={style['button-map']} onClick={handle.enter}>
 					Enter fullscreen

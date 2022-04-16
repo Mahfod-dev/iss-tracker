@@ -1,6 +1,6 @@
 .login-box {
-	width: 400px;
-	height: 50vh;
+	width: 500px;
+	height: 60vh;
 	padding: 40px;
 	margin: 12rem auto;
 	background: rgba(0, 0, 0, 0.5);
@@ -32,7 +32,7 @@
 	background: transparent;
 }
 
-.labelform {
+.labelForm {
 	position: absolute;
 	top: 0;
 	left: 0;

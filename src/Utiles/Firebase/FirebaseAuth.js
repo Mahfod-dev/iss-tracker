@@ -22,7 +22,7 @@ const firebaseConfig = {
 }
 
 // Initialize Firebase
-const firebaseApp = initializeApp(firebaseConfig)
+initializeApp(firebaseConfig)
 
 //init service
 export const auth = getAuth()
