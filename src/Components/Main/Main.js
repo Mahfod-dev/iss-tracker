@@ -4,7 +4,7 @@ import Coordinates from '../../Utiles/Coordinates'
 import style from './Main.module.css'
 import axios from 'axios'
 
-const ISS_URL = 'https://api.open-notify.org/iss-now.json'
+const ISS_URL = 'http://api.open-notify.org/iss-now.json'
 
 export default function Main() {
 	const [coordinates, setCoordinates] = useState({ lat: '', lng: '' })
