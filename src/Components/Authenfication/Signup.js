@@ -67,7 +67,9 @@ const Signup = () => {
 							name='displayName'
 							value={displayName}
 						/>
-						<label htmlFor='email'>Your Name</label>
+						<label className={classes.labelForm} htmlFor='email'>
+							Your Name
+						</label>
 					</div>
 				</div>
 				<div className={classes['user-box']}>
@@ -81,7 +83,9 @@ const Signup = () => {
 							name='email'
 							value={email}
 						/>
-						<label htmlFor='email'>Your Email</label>
+						<label className={classes.labelForm} htmlFor='email'>
+							Your Email
+						</label>
 					</div>
 				</div>
 				<div className={classes['user-box']}>
@@ -94,7 +98,9 @@ const Signup = () => {
 						name='password'
 						value={password}
 					/>
-					<label htmlFor='password'>Your Password</label>
+					<label className={classes.labelForm} htmlFor='password'>
+						Your Password
+					</label>
 				</div>
 				<div className={classes['user-box']}>
 					<input
@@ -106,7 +112,9 @@ const Signup = () => {
 						name='confirmPassword'
 						value={confirmPassword}
 					/>
-					<label htmlFor='password'>Confirm Your Password</label>
+					<label className={classes.labelForm} htmlFor='password'>
+						Confirm Your Password
+					</label>
 				</div>
 				<div>
 					<button className={classes['button-form']} type='submit'>

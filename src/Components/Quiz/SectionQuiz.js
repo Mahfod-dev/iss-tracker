@@ -18,7 +18,7 @@ function SectionQuiz() {
 	if (waiting) {
 		return <SetupForm />
 	}
-	if (loading) {
+	if (!loading) {
 		return <Loader />
 	}
 

@@ -105,7 +105,9 @@ const Signin = () => {
 							name='email'
 							value={email}
 						/>
-						<label htmlFor='email'>Your Email</label>
+						<label className={classes.labelForm} htmlFor='email'>
+							Your Email
+						</label>
 					</div>
 				</div>
 				<div className={classes['user-box']}>
@@ -118,7 +120,9 @@ const Signin = () => {
 						name='password'
 						value={password}
 					/>
-					<label htmlFor='password'>Your Password</label>
+					<label className={classes.labelForm} htmlFor='password'>
+						Your Password
+					</label>
 				</div>
 				<div>
 					<button className={classes['button-form']} type='submit'>
