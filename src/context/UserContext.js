@@ -8,6 +8,7 @@ import {
 export const UserContext = createContext({
 	setCurrentUser: () => null,
 	currentUser: null,
+	nameUser: '',
 })
 
 export const UseProvider = ({ children }) => {
@@ -24,7 +25,7 @@ export const UseProvider = ({ children }) => {
 		})
 
 		return () => unsubscribe
-	}, [])
+	}, [currentUser])
 
 	return <UserContext.Provider value={value}>{children}</UserContext.Provider>
 }

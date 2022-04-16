@@ -33,10 +33,7 @@ const Signup = () => {
 		try {
 			const { user } = await createAuthUserWithEmailAndPassword(email, password)
 
-			console.log(user)
-
 			await createUserDocumentFromAuth(user, { displayName })
-			console.log('add Modal')
 
 			resetFormFields()
 			navigate('/')

@@ -10,6 +10,7 @@
 }
 .review {
 	background: var(--clr-white);
+	opacity: 0.8;
 	padding: 1.5rem 2rem;
 	border-radius: var(--radius);
 	box-shadow: var(--light-shadow);

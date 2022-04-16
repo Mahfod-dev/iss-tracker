@@ -19,10 +19,6 @@ const Signin = () => {
 
 	const { currentUser } = useContext(UserContext)
 
-	if (currentUser) {
-		navigate('/')
-	}
-
 	const [formFields, setFormFields] = useState(defaultFormFields)
 	const { email, password } = formFields
 
@@ -41,7 +37,6 @@ const Signin = () => {
 			await signInAuthUserWithEmailAndPassword(email, password)
 
 			resetFormFields()
-			navigate('/')
 		} catch (error) {
 			console.log('user sign in failed', error)
 		}

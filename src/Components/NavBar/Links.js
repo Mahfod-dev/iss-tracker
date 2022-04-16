@@ -14,10 +14,6 @@ import { firstName } from '../../Utiles/utilsFunc'
 export default function Links() {
 	const { currentUser } = useContext(UserContext)
 
-	// console.log(
-	// 	currentUser === null ? 'signIn' : firstName(currentUser.displayName)
-	// )
-
 	const navLink = links.map((link) => {
 		return (
 			<li key={link.id}>
@@ -45,7 +41,7 @@ export default function Links() {
 							{currentUser === null
 								? 'signIn'
 								: firstName(
-										currentUser.displayName ? currentUser.displayName : 'toi'
+										currentUser.displayName ? currentUser.displayName : 'you'
 								  )}
 						</li>
 						<li>

@@ -7,7 +7,7 @@ import ArticleItem from './Components/Articles/ArticleItem'
 
 //
 import './Styles/globalStyle.css'
-import { Fragment } from 'react/cjs/react.production.min'
+
 
 const Header = lazy(() => import('./Components/Header/Header'))
 const Signup = lazy(() => import('./Components/Authenfication/Signup'))
@@ -18,6 +18,8 @@ const Main = lazy(() => import('./Components/Main/Main'))
 
 const App = () => {
 	const { currentUser } = useContext(UserContext)
+
+
 
 	return (
 		<main className='rootStyle'>
